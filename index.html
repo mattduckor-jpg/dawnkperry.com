@@ -16,13 +16,13 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23F7F3EC'/><text x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%231F1B18'>D</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Dawn K. Perry","url":"https://dawnkperry.com/","jobTitle":"Writer and editor","email":"mailto:dawnkperry@gmail.com","sameAs":["https://www.instagram.com/dawnkperry/"],
 "subjectOf":{"@type":"Book","name":"Ready, Set, Cook","author":{"@type":"Person","name":"Dawn Perry"},"isbn":"9781982147266","publisher":"Simon & Schuster"}}
 </script>
 <style>
-:root{--bg:#F7F3EC;--ink:#1F1B18;--muted:#6E655C;--rule:#D9D0C3;--link:#9A4A2A;--terra:#B4532F;--olive:#46522F;--olive-lt:#E9E4CF;--blush:#F1DCCB;--serif:"Newsreader",Georgia,"Times New Roman",serif}
+:root{--bg:#F7F3EC;--ink:#1F1B18;--muted:#6E655C;--rule:#D9D0C3;--link:#9A4A2A;--terra:#B4532F;--olive:#46522F;--olive-lt:#E9E4CF;--blush:#F1DCCB;--serif:"Newsreader",Georgia,"Times New Roman",serif;--display:"Barlow Condensed","Arial Narrow",sans-serif;--orange:#D86F2B;--red:#C42B2B}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font:400 19px/1.6 var(--serif);-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
 img{display:block;max-width:100%;height:auto}
@@ -39,10 +39,10 @@ nav a:hover{color:var(--ink)}
 @media(max-width:640px){header .wrap{flex-direction:column;gap:6px}nav{gap:18px;font-size:16px}}
 
 .intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;padding-top:64px;padding-bottom:80px}
-.intro h1{font-weight:300;font-size:clamp(52px,8vw,96px);line-height:.95;letter-spacing:-.02em;margin-bottom:28px}
+.intro h1{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(68px,10.5vw,136px);line-height:.88;letter-spacing:-.005em;margin-bottom:30px}
 .intro p{font-size:23px;line-height:1.45;max-width:24em}
 .intro p+p{margin-top:16px;font-size:19px;color:var(--muted)}
-.intro h1 em{color:var(--terra)}
+.intro h1 em{font-style:normal;color:var(--orange)}
 .portrait{position:relative}
 .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#E6DED1;border-radius:999px 999px 0 0}
 .sticker{position:absolute;left:-34px;bottom:44px;width:132px;height:132px;transform:rotate(-12deg);transition:transform .4s}
@@ -51,10 +51,10 @@ nav a:hover{color:var(--ink)}
 @media(max-width:820px){.intro{grid-template-columns:1fr;gap:36px;padding-top:32px;padding-bottom:56px}.portrait{order:-1;max-width:420px;margin-left:auto;margin-right:auto;width:88%}.sticker{left:-18px;width:110px;height:110px}}
 
 section{padding:0 0 88px}
-section>.wrap>h2{font-weight:300;font-style:italic;font-size:clamp(40px,5vw,56px);line-height:1;letter-spacing:-.02em;color:var(--terra);padding-top:22px;border-top:1px solid var(--ink);margin-bottom:40px}
+section>.wrap>h2{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(48px,6.5vw,80px);line-height:.9;letter-spacing:0;color:var(--orange);padding-top:22px;border-top:1px solid var(--ink);margin-bottom:40px}
 
 #book{background:var(--olive);color:#F4EFE2;padding:72px 0 88px;margin-bottom:88px}
-#book>.wrap>h2{color:#E9C9A8;border-top-color:#F4EFE2}
+#book>.wrap>h2{color:#F2A15E;border-top-color:#F4EFE2}
 #book .pub,#book .src{color:#C9CDB3}
 #book a{text-decoration-color:#C9CDB3}#book a:hover{color:#fff}
 .book{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:start}
@@ -62,7 +62,7 @@ section>.wrap>h2{font-weight:300;font-style:italic;font-size:clamp(40px,5vw,56px
 .book img:hover{transform:rotate(0)}
 .buy{display:inline-block;margin-top:4px;padding:12px 22px;border:1px solid #F4EFE2;border-radius:999px 999px 999px 999px;text-decoration:none!important}
 .buy:hover{background:#F4EFE2;color:var(--olive)!important}
-.book h3{font-weight:300;font-size:44px;line-height:1.05;letter-spacing:-.01em}
+.book h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(40px,4.6vw,58px);line-height:.92;letter-spacing:0}
 .book .pub{color:var(--muted);margin:6px 0 22px}
 .book p{max-width:32em}
 .book .quote{font-style:italic;font-size:23px;line-height:1.4;margin:26px 0 6px;max-width:26em}
@@ -74,7 +74,7 @@ section>.wrap>h2{font-weight:300;font-style:italic;font-size:clamp(40px,5vw,56px
 .clips li:first-child{padding-top:0}
 .clips a{font-size:22px;line-height:1.3;text-decoration:none}
 .clips a:hover{text-decoration:underline}
-.clips span{color:var(--terra);font-size:16px;white-space:nowrap;text-align:right}
+.clips span{color:var(--orange);font-size:16px;white-space:nowrap;text-align:right}
 .clips a::before{content:"";display:inline-block;width:0;transition:width .25s}
 .clips li:hover a::before{width:14px}
 @media(max-width:640px){.clips li{grid-template-columns:1fr;gap:2px}.clips span{text-align:left}}
@@ -100,7 +100,7 @@ section>.wrap>h2{font-weight:300;font-style:italic;font-size:clamp(40px,5vw,56px
 
 #contact{background:var(--blush);padding:72px 0 96px;margin:0}
 .contact p{font-size:23px;line-height:1.45;max-width:30em}
-.contact .email{display:inline-block;font-weight:300;font-style:italic;font-size:clamp(34px,6vw,72px);line-height:1.05;letter-spacing:-.02em;margin:6px 0 22px;text-decoration:none;color:var(--ink);border-bottom:2px solid var(--terra)}
+.contact .email{display:inline-block;font-weight:300;font-style:italic;font-size:clamp(30px,5.6vw,68px);line-height:1.05;letter-spacing:-.02em;margin:6px 0 22px;text-decoration:none;color:var(--ink);border-bottom:2px solid var(--orange);overflow-wrap:anywhere}
 .contact .email:hover{color:var(--terra)}
 .contact a{text-decoration-color:var(--muted)}
 
@@ -133,7 +133,7 @@ footer .wrap{border-top:1px solid #DDB9A2;padding-top:20px;padding-bottom:36px;c
   <div class="portrait">
     <img src="images/portrait.jpg" alt="Dawn K. Perry" width="900" height="1125" fetchpriority="high">
     <a class="sticker" href="#book" aria-label="Ready, Set, Cook, out now">
-      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><circle cx="100" cy="100" r="98" fill="#B4532F"/><text font-family="Newsreader,Georgia,serif" font-size="22" fill="#F7F3EC" xml:space="preserve"><textPath href="#ring" textLength="446" lengthAdjust="spacing">READY, SET, COOK  ·  OUT NOW  ·  </textPath></text><text x="100" y="114" text-anchor="middle" font-family="Newsreader,Georgia,serif" font-style="italic" font-size="44" fill="#F7F3EC">DP</text></svg>
+      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><circle cx="100" cy="100" r="98" fill="#D86F2B"/><text font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="700" font-size="25" fill="#F7F3EC" xml:space="preserve"><textPath href="#ring" textLength="446" lengthAdjust="spacing">READY, SET, COOK  ·  OUT NOW  ·  </textPath></text><text x="100" y="117" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="700" font-size="52" fill="#F7F3EC">DP</text></svg>
     </a>
   </div>
 </div>
