@@ -13,106 +13,119 @@
 <meta property="og:url" content="https://dawnkperry.com/">
 <meta property="og:image" content="https://dawnkperry.com/images/portrait.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23F7F3EC'/><text x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%231F1B18'>D</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23D86F2B'/><text x='32' y='43' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='30' text-anchor='middle' fill='%23F7F3EC'>DP</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Dawn K. Perry","url":"https://dawnkperry.com/","jobTitle":"Writer and editor","email":"mailto:dawnkperry@gmail.com","sameAs":["https://www.instagram.com/dawnkperry/"],
 "subjectOf":{"@type":"Book","name":"Ready, Set, Cook","author":{"@type":"Person","name":"Dawn Perry"},"isbn":"9781982147266","publisher":"Simon & Schuster"}}
 </script>
 <style>
-:root{--bg:#F7F3EC;--ink:#1F1B18;--muted:#6E655C;--rule:#D9D0C3;--link:#9A4A2A;--terra:#B4532F;--olive:#46522F;--olive-lt:#E9E4CF;--blush:#F1DCCB;--serif:"Newsreader",Georgia,"Times New Roman",serif;--display:"Barlow Condensed","Arial Narrow",sans-serif;--orange:#D86F2B;--red:#C42B2B}
+:root{
+  --bg:#F7F3EC;--ink:#1F1B18;--muted:#6E655C;--rule:#E2D9CC;
+  --orange:#D86F2B;--orange-dk:#B85A1E;--butter:#F6DD8E;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font:400 19px/1.6 var(--serif);-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{color:var(--link);text-decoration-color:var(--link)}
+a:hover{color:var(--orange);text-decoration-color:var(--orange)}
 i,em{font-style:italic}
 .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.caps{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.01em}
+.btn{display:inline-block;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:17px;line-height:1;padding:15px 26px 14px;border-radius:999px;background:var(--orange);color:#fff;text-decoration:none;transition:background .2s,transform .2s}
+.btn:hover{background:var(--orange-dk);color:#fff;transform:translateY(-1px)}
 
-header .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding-top:26px;padding-bottom:22px;border-bottom:1px solid var(--ink)}
-.name{font-size:21px;text-decoration:none}
+/* header */
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:24px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
+.logo{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:18px;text-decoration:none}
+.logo span{color:var(--orange)}
 nav{display:flex;gap:26px;font-size:17px}
 nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--ink)}
-@media(max-width:640px){header .wrap{flex-direction:column;gap:6px}nav{gap:18px;font-size:16px}}
+@media(max-width:640px){header .wrap{flex-direction:column;align-items:flex-start;gap:8px}nav{gap:18px;font-size:16px}}
 
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;padding-top:64px;padding-bottom:80px}
-.intro h1{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(68px,10.5vw,136px);line-height:.88;letter-spacing:-.005em;margin-bottom:30px}
-.intro p{font-size:23px;line-height:1.45;max-width:24em}
-.intro p+p{margin-top:16px;font-size:19px;color:var(--muted)}
+/* intro */
+.intro{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-top:56px;padding-bottom:96px}
+.intro h1{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(68px,10.5vw,138px);line-height:.88;letter-spacing:-.005em;margin-bottom:28px}
 .intro h1 em{font-style:normal;color:var(--orange)}
+.intro .lede{font-size:24px;line-height:1.4;max-width:22em}
+.intro .creds{margin-top:14px;font-size:18px;color:var(--muted);max-width:28em}
 .portrait{position:relative}
 .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#E6DED1;border-radius:999px 999px 0 0}
-.sticker{position:absolute;left:-34px;bottom:44px;width:132px;height:132px;transform:rotate(-12deg);transition:transform .4s}
+.sticker{position:absolute;left:-34px;bottom:44px;width:128px;height:128px;transform:rotate(-12deg);transition:transform .4s}
 .sticker:hover{transform:rotate(8deg) scale(1.04)}
 .sticker svg{width:100%;height:100%;display:block}
-@media(max-width:820px){.intro{grid-template-columns:1fr;gap:36px;padding-top:32px;padding-bottom:56px}.portrait{order:-1;max-width:420px;margin-left:auto;margin-right:auto;width:88%}.sticker{left:-18px;width:110px;height:110px}}
+@media(max-width:820px){.intro{grid-template-columns:1fr;gap:36px;padding-top:32px;padding-bottom:64px}.portrait{order:-1;max-width:420px;width:88%;margin:0 auto}.sticker{left:-18px;width:106px;height:106px}}
 
-section{padding:0 0 88px}
-section>.wrap>h2{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(48px,6.5vw,80px);line-height:.9;letter-spacing:0;color:var(--orange);padding-top:22px;border-top:1px solid var(--ink);margin-bottom:40px}
+/* sections */
+section{padding:0 0 104px}
+.sec-title{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(36px,4.4vw,54px);line-height:.95;letter-spacing:.01em;color:var(--orange);margin-bottom:36px}
 
-#book{background:var(--olive);color:#F4EFE2;padding:72px 0 88px;margin-bottom:88px}
-#book>.wrap>h2{color:#F2A15E;border-top-color:#F4EFE2}
-#book .pub,#book .src{color:#C9CDB3}
-#book a{text-decoration-color:#C9CDB3}#book a:hover{color:#fff}
-.book{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:start}
-.book img{width:100%;transform:rotate(-3deg);box-shadow:0 24px 40px -18px rgba(0,0,0,.5);transition:transform .4s}
+/* book */
+#book{background:var(--butter);padding:88px 0 96px;margin-bottom:104px}
+#book .sec-title{color:var(--ink)}
+.book{display:grid;grid-template-columns:400px 1fr;gap:72px;align-items:center}
+.book img{width:100%;transform:rotate(-3deg);box-shadow:0 30px 50px -24px rgba(60,40,0,.45);transition:transform .4s}
 .book img:hover{transform:rotate(0)}
-.buy{display:inline-block;margin-top:4px;padding:12px 22px;border:1px solid #F4EFE2;border-radius:999px 999px 999px 999px;text-decoration:none!important}
-.buy:hover{background:#F4EFE2;color:var(--olive)!important}
-.book h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(40px,4.6vw,58px);line-height:.92;letter-spacing:0}
-.book .pub{color:var(--muted);margin:6px 0 22px}
+.book h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(44px,5vw,64px);line-height:.9;letter-spacing:.005em}
+.book .pub{color:#6B5A2E;margin:8px 0 22px}
 .book p{max-width:32em}
-.book .quote{font-style:italic;font-size:23px;line-height:1.4;margin:26px 0 6px;max-width:26em}
-.book .src{color:var(--muted);font-size:16px;margin-bottom:26px}
-@media(max-width:720px){.book{grid-template-columns:1fr;gap:28px}.book img{max-width:240px}}
+.book .quote{font-style:italic;font-size:clamp(23px,2.4vw,28px);line-height:1.35;margin:28px 0 8px;max-width:24em}
+.book .src{color:#6B5A2E;font-size:16px;margin-bottom:30px}
+@media(max-width:820px){.book{grid-template-columns:1fr;gap:40px}.book img{max-width:280px}}
 
-.clips{list-style:none}
-.clips li{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule)}
-.clips li:first-child{padding-top:0}
-.clips a{font-size:22px;line-height:1.3;text-decoration:none}
-.clips a:hover{text-decoration:underline}
-.clips span{color:var(--orange);font-size:16px;white-space:nowrap;text-align:right}
-.clips a::before{content:"";display:inline-block;width:0;transition:width .25s}
-.clips li:hover a::before{width:14px}
-@media(max-width:640px){.clips li{grid-template-columns:1fr;gap:2px}.clips span{text-align:left}}
+/* writing */
+.clips{list-style:none;border-top:1px solid var(--rule)}
+.clips li{border-bottom:1px solid var(--rule)}
+.clips a{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:baseline;padding:16px 0;text-decoration:none}
+.clips .pub{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:17px;color:var(--orange)}
+.clips .title{font-size:22px;line-height:1.3;transition:color .2s}
+.clips a:hover .title{color:var(--orange)}
+.clips .pdf{font-size:15px;color:var(--muted);margin-left:6px}
+@media(max-width:640px){.clips a{grid-template-columns:1fr;gap:2px}}
 
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 24px}
-.grid figure{margin:0}
-.grid img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#E6DED1;transition:transform .35s}
-.grid > :nth-child(odd) img{border-radius:999px 999px 0 0}
-.grid > :nth-child(4n+2) img{border-radius:0 0 999px 999px}
-.grid a:hover img{transform:rotate(-2deg) translateY(-4px)}
-.grid figcaption{font-size:16px;line-height:1.35;margin-top:10px}
-.grid figcaption span{display:block;color:var(--muted);font-style:italic}
-.grid a{text-decoration:none}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}}
+/* recipe collage */
+.collage{columns:4 220px;column-gap:22px}
+.collage figure{break-inside:avoid;margin:0 0 26px;display:block}
+.collage img{width:100%;object-fit:cover;background:#E6DED1;aspect-ratio:4/5;transition:transform .35s}
+.collage > :nth-child(3n) img{aspect-ratio:1/1}
+.collage > :nth-child(3n+2) img{aspect-ratio:3/4}
+.collage > :nth-child(odd) img{border-radius:999px 999px 0 0}
+.collage > :nth-child(4n+2) img{border-radius:0 0 999px 999px}
+.collage a{text-decoration:none;display:block}
+.collage a:hover img{transform:rotate(-2deg) translateY(-4px)}
+.collage figcaption{font-size:16px;line-height:1.35;margin-top:10px}
+.collage figcaption span{display:block;color:var(--muted);font-style:italic}
+@media(max-width:600px){.collage{columns:2;column-gap:14px}}
 
-.about{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}
-.about img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#E6DED1;border-radius:50%}
-.about small{display:block;color:var(--muted);font-size:14px;margin-top:8px}
+/* about */
+.about{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start}
+.about img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#E6DED1;border-radius:999px 999px 0 0}
+.about small{display:block;color:var(--muted);font-size:14px;margin-top:10px}
+.about .lead{font-size:24px;line-height:1.4;margin-bottom:22px;max-width:26em}
 .about p{max-width:34em;margin-bottom:18px}
 .about a{text-decoration-color:var(--muted)}
-@media(max-width:720px){.about{grid-template-columns:1fr;gap:28px}.about figure{max-width:260px}}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}.about figure{max-width:280px}}
 
-#contact{background:var(--blush);padding:72px 0 96px;margin:0}
-.contact p{font-size:23px;line-height:1.45;max-width:30em}
-.contact .email{display:inline-block;font-weight:300;font-style:italic;font-size:clamp(30px,5.6vw,68px);line-height:1.05;letter-spacing:-.02em;margin:6px 0 22px;text-decoration:none;color:var(--ink);border-bottom:2px solid var(--orange);overflow-wrap:anywhere}
-.contact .email:hover{color:var(--terra)}
-.contact a{text-decoration-color:var(--muted)}
+/* contact */
+.contact p{font-size:21px;max-width:30em}
+.contact .email{font-size:clamp(24px,3vw,32px);margin:10px 0 26px}
+.contact .email a{text-decoration-color:var(--orange)}
+.contact .row{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.contact .row a:not(.btn){font-size:19px}
 
-footer{background:var(--blush)}
-footer .wrap{border-top:1px solid #DDB9A2;padding-top:20px;padding-bottom:36px;color:var(--muted);font-size:15px}
+footer .wrap{border-top:1px solid var(--rule);padding-top:20px;padding-bottom:36px;color:var(--muted);font-size:15px}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="name" href="/">Dawn K. Perry</a>
+    <a class="logo" href="/">Dawn <span>K.</span> Perry</a>
     <nav aria-label="Main">
       <a href="#book">Book</a>
       <a href="#writing">Writing</a>
@@ -127,29 +140,29 @@ footer .wrap{border-top:1px solid #DDB9A2;padding-top:20px;padding-bottom:36px;c
 <div class="wrap intro">
   <div>
     <h1>Dawn <em>K.</em> Perry</h1>
-    <p>Writer, editor, and recipe developer. Author of <i>Ready, Set, Cook</i>.</p>
-    <p>Previously food director at <i>Real Simple</i> and senior food editor at <i>Bon Appétit</i>. More than a decade of translating the ideas of brands and individuals into impactful stories.</p>
+    <p class="lede">Writer, editor, and recipe developer. Author of <i>Ready, Set, Cook</i>.</p>
+    <p class="creds">Formerly food director at <i>Real Simple</i> and senior food editor at <i>Bon Appétit</i>.</p>
   </div>
   <div class="portrait">
     <img src="images/portrait.jpg" alt="Dawn K. Perry" width="900" height="1125" fetchpriority="high">
     <a class="sticker" href="#book" aria-label="Ready, Set, Cook, out now">
-      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><circle cx="100" cy="100" r="98" fill="#D86F2B"/><text font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="700" font-size="25" fill="#F7F3EC" xml:space="preserve"><textPath href="#ring" textLength="446" lengthAdjust="spacing">READY, SET, COOK  ·  OUT NOW  ·  </textPath></text><text x="100" y="117" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="700" font-size="52" fill="#F7F3EC">DP</text></svg>
+      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><circle cx="100" cy="100" r="98" fill="#D86F2B"/><text font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="25" fill="#F7F3EC" xml:space="preserve"><textPath href="#ring" textLength="446" lengthAdjust="spacing">READY, SET, COOK  ·  OUT NOW  ·  </textPath></text><text x="100" y="117" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="52" fill="#F7F3EC">DP</text></svg>
     </a>
   </div>
 </div>
 
 <section id="book">
   <div class="wrap">
-    <h2>Book</h2>
+    <h2 class="sec-title">Book</h2>
     <div class="book">
-      <img src="images/ready-set-cook-cover.jpg" alt="Cover of Ready, Set, Cook by Dawn Perry" width="640" height="800" loading="lazy">
+      <img src="images/ready-set-cook-cover.jpg" alt="Cover of Ready, Set, Cook by Dawn Perry" width="640" height="795" loading="lazy">
       <div>
         <h3>Ready, Set, Cook</h3>
         <p class="pub">Simon &amp; Schuster</p>
         <p>A guide to quick, flexible meals built on what's already in the pantry, from scallion corn cakes to miso ramen, drawing on Dawn's years in the kitchens of <i>Bon Appétit</i> and <i>Real Simple</i>.</p>
         <p class="quote">“Perry's tutelage is a culinary windfall that will pay big dividends for busy home cooks.”</p>
         <p class="src">Publishers Weekly</p>
-        <p><a class="buy" href="https://www.amazon.com/Ready-Set-Cook-Equipment-Required/dp/1982147261/" target="_blank" rel="noopener">Buy the book</a></p>
+        <a class="btn" href="https://www.amazon.com/Ready-Set-Cook-Equipment-Required/dp/1982147261/" target="_blank" rel="noopener">Buy the book</a>
       </div>
     </div>
   </div>
@@ -157,61 +170,62 @@ footer .wrap{border-top:1px solid #DDB9A2;padding-top:20px;padding-bottom:36px;c
 
 <section id="writing">
   <div class="wrap">
-    <h2>Writing</h2>
+    <h2 class="sec-title">Writing</h2>
     <ul class="clips">
-      <li><a href="https://www.washingtonpost.com/opinions/2022/02/02/food-writer-pandemic-cooking-boredom/" target="_blank" rel="noopener">A food writer on pandemic cooking boredom</a><span><i>The Washington Post</i></span></li>
-      <li><a href="https://www.nytimes.com/2020/04/13/dining/quick-pasta-recipes-coronavirus.html" target="_blank" rel="noopener">Quick pasta recipes</a><span><i>The New York Times</i></span></li>
-      <li><a href="https://www.nytimes.com/2020/05/18/dining/frozen-fruit-recipes.html" target="_blank" rel="noopener">Cooking with frozen fruit</a><span><i>The New York Times</i></span></li>
-      <li><a href="https://www.nytimes.com/2020/02/27/dining/modern-chicken-breast-recipes.html" target="_blank" rel="noopener">Modern chicken breast recipes</a><span><i>The New York Times</i></span></li>
-      <li><a href="https://www.foodandwine.com/comfort-food/meatballs/how-to-make-big-batch-freezer-meatballs" target="_blank" rel="noopener">How to make big-batch freezer meatballs</a><span><i>Food &amp; Wine</i></span></li>
-      <li><a href="https://elemental.medium.com/6-calming-reminders-if-cooking-is-stressing-you-out-5157eab34f7f" target="_blank" rel="noopener">6 calming reminders if cooking is stressing you out</a><span><i>Elemental</i></span></li>
-      <li><a href="https://www.oxo.com/blog/baby-and-toddler/wear-baby-cooking/" target="_blank" rel="noopener">Cooking while wearing a baby</a><span>OXO</span></li>
-      <li><a href="http://www.bonappetit.com/drinks/cocktails/article/scared-of-martinis" target="_blank" rel="noopener">3 martinis for people scared of martinis</a><span><i>Bon Appétit</i></span></li>
-      <li><a href="files/ba-cook-like-a-pro-martini.pdf" target="_blank" rel="noopener">Cook Like a Pro: the martini</a><span><i>Bon Appétit</i> (PDF)</span></li>
-      <li><a href="files/ba-navigator-hawaii.pdf" target="_blank" rel="noopener">Navigator: Hawaii</a><span><i>Bon Appétit</i> (PDF)</span></li>
+      <li><a href="https://www.washingtonpost.com/opinions/2022/02/02/food-writer-pandemic-cooking-boredom/" target="_blank" rel="noopener"><span class="pub">The Washington Post</span><span class="title">The pandemic made me depressed about dinner. I'm not alone.</span></a></li>
+      <li><a href="https://www.nytimes.com/2020/04/13/dining/quick-pasta-recipes-coronavirus.html" target="_blank" rel="noopener"><span class="pub">The New York Times</span><span class="title">5 fast pastas for long days</span></a></li>
+      <li><a href="https://www.nytimes.com/2020/05/18/dining/frozen-fruit-recipes.html" target="_blank" rel="noopener"><span class="pub">The New York Times</span><span class="title">3 summery sweets you can make with frozen fruit</span></a></li>
+      <li><a href="https://www.nytimes.com/2020/02/27/dining/modern-chicken-breast-recipes.html" target="_blank" rel="noopener"><span class="pub">The New York Times</span><span class="title">Modern chicken breast recipes</span></a></li>
+      <li><a href="https://www.foodandwine.com/comfort-food/meatballs/how-to-make-big-batch-freezer-meatballs" target="_blank" rel="noopener"><span class="pub">Food &amp; Wine</span><span class="title">How to make big-batch freezer meatballs</span></a></li>
+      <li><a href="https://elemental.medium.com/6-calming-reminders-if-cooking-is-stressing-you-out-5157eab34f7f" target="_blank" rel="noopener"><span class="pub">Elemental</span><span class="title">6 calming reminders if cooking is stressing you out</span></a></li>
+      <li><a href="https://www.oxo.com/blog/baby-and-toddler/wear-baby-cooking/" target="_blank" rel="noopener"><span class="pub">OXO</span><span class="title">How to cook while wearing a baby</span></a></li>
+      <li><a href="http://www.bonappetit.com/drinks/cocktails/article/scared-of-martinis" target="_blank" rel="noopener"><span class="pub">Bon Appétit</span><span class="title">3 martinis for people scared of martinis</span></a></li>
+      <li><a href="files/ba-cook-like-a-pro-martini.pdf" target="_blank" rel="noopener"><span class="pub">Bon Appétit</span><span class="title">Make a martini like a pro with Audrey Saunders<span class="pdf">PDF</span></span></a></li>
+      <li><a href="files/ba-navigator-hawaii.pdf" target="_blank" rel="noopener"><span class="pub">Bon Appétit</span><span class="title">Navigator: Hawaii<span class="pdf">PDF</span></span></a></li>
     </ul>
   </div>
 </section>
 
 <section id="recipes">
   <div class="wrap">
-    <h2>Recipes</h2>
-    <div class="grid">
+    <h2 class="sec-title">Recipes</h2>
+    <div class="collage">
       <a href="http://www.bonappetit.com/recipe/rigatoni-lemon-chile-pesto-grated-egg" target="_blank" rel="noopener"><figure><img src="images/rigatoni-lemon-chile-pesto.jpg" alt="Rigatoni with lemon-chile pesto and grated egg" loading="lazy"><figcaption>Rigatoni with lemon-chile pesto and grated egg<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/winter-spaghetti-with-garlic-calabrian-chiles-recipe" target="_blank" rel="noopener"><figure><img src="images/winter-spaghetti.jpg" alt="Winter spaghetti with garlic and Calabrian chiles" loading="lazy"><figcaption>Winter spaghetti with garlic and Calabrian chiles<span>Real Simple</span></figcaption></figure></a>
+      <figure><img src="images/rs-0418miy-18.jpg" alt="Recipe photograph" loading="lazy"></figure>
       <a href="http://www.bonappetit.com/recipe/shrimp-with-fresh-corn-grits" target="_blank" rel="noopener"><figure><img src="images/shrimp-corn-grits.jpg" alt="Shrimp with fresh corn grits" loading="lazy"><figcaption>Shrimp with fresh corn grits<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/make-it-yourself-birthday-cake" target="_blank" rel="noopener"><figure><img src="images/birthday-cake.jpg" alt="Make-it-yourself birthday cake" loading="lazy"><figcaption>Make-it-yourself birthday cake<span>Real Simple</span></figcaption></figure></a>
+      <figure><img src="images/sku0880.jpg" alt="Recipe photograph" loading="lazy"></figure>
       <a href="http://www.bonappetit.com/recipe/duck-confit-with-spicy-pickled-raisins" target="_blank" rel="noopener"><figure><img src="images/duck-confit.jpg" alt="Duck confit with spicy pickled raisins" loading="lazy"><figcaption>Duck confit with spicy pickled raisins<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/vanilla-peaches-in-rose" target="_blank" rel="noopener"><figure><img src="images/vanilla-peaches.jpg" alt="Vanilla peaches in rosé" loading="lazy"><figcaption>Vanilla peaches in rosé<span>Real Simple</span></figcaption></figure></a>
+      <figure><img src="images/rs-0218foo-23.jpg" alt="Recipe photograph" loading="lazy"></figure>
       <a href="http://www.bonappetit.com/recipe/extra-buttery-mashed-potatoes" target="_blank" rel="noopener"><figure><img src="images/mashed-potatoes.jpg" alt="Extra-buttery mashed potatoes" loading="lazy"><figcaption>Extra-buttery mashed potatoes<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/kiwi-cucumber-relish" target="_blank" rel="noopener"><figure><img src="images/kiwi-cucumber-relish.jpg" alt="Kiwi-cucumber relish" loading="lazy"><figcaption>Kiwi-cucumber relish<span>Real Simple</span></figcaption></figure></a>
+      <figure><img src="images/sku0842.jpg" alt="Recipe photograph" loading="lazy"></figure>
       <a href="http://www.bonappetit.com/recipe/spiced-black-lentils-with-yogurt-and-mint" target="_blank" rel="noopener"><figure><img src="images/black-lentils.jpg" alt="Spiced black lentils with yogurt and mint" loading="lazy"><figcaption>Spiced black lentils with yogurt and mint<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/chocolate-dipped-coconut-pops" target="_blank" rel="noopener"><figure><img src="images/coconut-pops.jpg" alt="Chocolate-dipped coconut pops" loading="lazy"><figcaption>Chocolate-dipped coconut pops<span>Real Simple</span></figcaption></figure></a>
+      <figure><img src="images/rs-0717kno-58.jpg" alt="Recipe photograph" loading="lazy"></figure>
       <a href="http://www.bonappetit.com/recipe/skillet-roast-chicken-with-fennel-parsnips-and-scallions" target="_blank" rel="noopener"><figure><img src="images/skillet-roast-chicken.jpg" alt="Skillet roast chicken with fennel, parsnips, and scallions" loading="lazy"><figcaption>Skillet roast chicken with fennel, parsnips, and scallions<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/cranberry-strawberry-crumb-pie" target="_blank" rel="noopener"><figure><img src="images/cranberry-strawberry-pie.png" alt="Cranberry-strawberry crumb pie" loading="lazy"><figcaption>Cranberry-strawberry crumb pie<span>Real Simple</span></figcaption></figure></a>
+      <figure><img src="images/sku0tk3.jpg" alt="Recipe photograph" loading="lazy"></figure>
       <a href="http://www.bonappetit.com/recipe/mussels-with-white-wine" target="_blank" rel="noopener"><figure><img src="images/mussels-white-wine.jpg" alt="Mussels with white wine" loading="lazy"><figcaption>Mussels with white wine<span>Bon Appétit</span></figcaption></figure></a>
-      <figure><img src="images/rs-0418miy-18.jpg" alt="Recipe photograph by Dawn K. Perry" loading="lazy"></figure>
-      <figure><img src="images/sku0880.jpg" alt="Recipe photograph by Dawn K. Perry" loading="lazy"></figure>
-      <figure><img src="images/rs-0218foo-23.jpg" alt="Recipe photograph by Dawn K. Perry" loading="lazy"></figure>
-      <figure><img src="images/sku0842.jpg" alt="Recipe photograph by Dawn K. Perry" loading="lazy"></figure>
-      <figure><img src="images/rs-0717kno-58.jpg" alt="Recipe photograph by Dawn K. Perry" loading="lazy"></figure>
-      <figure><img src="images/sku0tk3.jpg" alt="Recipe photograph by Dawn K. Perry" loading="lazy"></figure>
-      <figure><img src="images/sku0995.jpg" alt="Recipe photograph by Dawn K. Perry" loading="lazy"></figure>
+      <figure><img src="images/sku0995.jpg" alt="Recipe photograph" loading="lazy"></figure>
     </div>
   </div>
 </section>
 
 <section id="about">
   <div class="wrap">
-    <h2>About</h2>
+    <h2 class="sec-title">About</h2>
     <div class="about">
       <figure>
         <img src="images/headshot.jpg" alt="Dawn K. Perry" loading="lazy" width="800" height="1000">
         <small>Photo by Linda Pugliese</small>
       </figure>
       <div>
-        <p>Dawn K. Perry is a writer, editor, and the author of <i>Ready, Set, Cook</i> (Simon &amp; Schuster). Most recently she was food director at <i>Real Simple</i>.</p>
-        <p>She started out in the pastry and savory kitchens at Quince and worked as a private chef before becoming associate food editor at <i>Everyday Food</i>. She went on to the <i>Real Simple</i> test kitchen, where a cake feature she wrote was nominated for an IACP award. At <i>Bon Appétit</i> she was senior food editor and then the magazine's first digital food editor, working on the IBM Chef Watson partnership and the James Beard Award-winning Cook Like a Pro package. She was also culinary content editor at Marley Spoon, where she was employee number nine.</p>
+        <p class="lead">Dawn K. Perry is a writer, editor, and the author of <i>Ready, Set, Cook</i> (Simon &amp; Schuster). Most recently she was food director at <i>Real Simple</i>.</p>
+        <p>She started out in the pastry and savory kitchens at Quince and worked as a private chef before becoming associate food editor at <i>Everyday Food</i>. In the <i>Real Simple</i> test kitchen, a cake feature she wrote was nominated for an IACP award.</p>
+        <p>At <i>Bon Appétit</i> she was senior food editor and then the magazine's first digital food editor, working on the IBM Chef Watson partnership and the James Beard Award-winning Cook Like a Pro package. She was also culinary content editor at Marley Spoon, where she was employee number nine.</p>
         <p>Her work has appeared in Epicurious, Tasting Table, <i>Food &amp; Wine</i>, <i>Southern Living</i>, and <i>Country Living</i>, and she wrote the <a href="https://www.shortstackeditions.com/products/vol-28-cucumbers-by-dawn-perry" target="_blank" rel="noopener"><i>Cucumbers</i></a> volume of Short Stack Editions. A few favorites: <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/pumpkin-muffins" target="_blank" rel="noopener">pumpkin muffins</a> for <i>Real Simple</i>, <a href="https://www.bonappetit.com/recipe/banana-bread" target="_blank" rel="noopener">banana bread</a> for <i>Bon Appétit</i>, <a href="https://www.epicurious.com/recipes/food/views/egg-curry-with-tomatoes-and-cilantro" target="_blank" rel="noopener">egg curry</a> for Epicurious, and <a href="https://www.foodandwine.com/chefs/communal-table-how-to-be-a-boss" target="_blank" rel="noopener">Communal Table</a> for <i>Food &amp; Wine</i>.</p>
       </div>
     </div>
@@ -220,10 +234,13 @@ footer .wrap{border-top:1px solid #DDB9A2;padding-top:20px;padding-bottom:36px;c
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <h2>Contact</h2>
+    <h2 class="sec-title">Contact</h2>
     <p>For writing, editing, and recipe development:</p>
-    <a class="email" href="mailto:dawnkperry@gmail.com">dawnkperry@gmail.com</a>
-    <p>Or find her on Instagram at <a href="https://www.instagram.com/dawnkperry/" target="_blank" rel="noopener">@dawnkperry</a>.</p>
+    <p class="email"><a href="mailto:dawnkperry@gmail.com">dawnkperry@gmail.com</a></p>
+    <div class="row">
+      <a class="btn" href="mailto:dawnkperry@gmail.com">Email Dawn</a>
+      <a href="https://www.instagram.com/dawnkperry/" target="_blank" rel="noopener">Instagram @dawnkperry</a>
+    </div>
   </div>
 </section>
 </main>
