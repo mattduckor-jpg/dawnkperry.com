@@ -49,7 +49,7 @@ nav a:hover{color:var(--ink)}
 @media(max-width:640px){header .wrap{flex-direction:column;align-items:flex-start;gap:8px}nav{gap:18px;font-size:16px}}
 
 /* intro */
-.intro{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-top:56px;padding-bottom:96px}
+.intro{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-top:56px;padding-bottom:64px}
 .intro h1{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(68px,10.5vw,138px);line-height:.88;letter-spacing:-.005em;margin-bottom:28px}
 .intro h1 em{font-style:normal;color:var(--orange)}
 .intro .lede{font-size:24px;line-height:1.4;max-width:22em}
@@ -104,6 +104,22 @@ section{padding:0 0 104px}
 .collage figcaption{font-size:16px;line-height:1.35;margin-top:10px}
 .collage figcaption span{display:block;color:var(--muted);font-style:italic}
 @media(max-width:600px){.collage{columns:2;column-gap:14px}}
+
+/* credentials strip */
+.creds-strip{padding-top:22px;padding-bottom:22px;margin-bottom:72px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.cs-label{font-size:15px;color:var(--muted);margin-bottom:8px}
+.creds-strip ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 0}
+.creds-strip li{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(17px,1.7vw,21px);color:var(--ink)}
+.creds-strip li:not(:last-child)::after{content:"·";color:var(--orange);margin:0 12px}
+
+/* services */
+.services{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;counter-reset:svc}
+.services li{counter-increment:svc;border-top:1px solid var(--ink);padding:18px 0 30px}
+.services li::before{content:counter(svc,decimal-leading-zero);display:block;font-family:var(--display);font-weight:600;color:var(--orange);font-size:16px;letter-spacing:.06em;margin-bottom:8px}
+.services h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:30px;line-height:.95;letter-spacing:.005em;margin-bottom:10px}
+.services p{font-size:17px;line-height:1.5;color:var(--ink);max-width:22em}
+.services-cta{margin-top:8px}
+@media(max-width:900px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* about */
 .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
@@ -172,7 +188,7 @@ html{-webkit-text-size-adjust:100%}
   nav a{display:none}
   nav a[href="#contact"]{display:inline-block;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#fff;background:var(--orange);border-radius:999px;padding:9px 14px 8px}
   nav a[href="#contact"]:hover{color:#fff}
-  .intro{gap:22px;padding-top:20px;padding-bottom:48px}
+  .intro{gap:22px;padding-top:20px;padding-bottom:32px}
   .portrait{width:74%;max-width:320px}
   .sticker{width:92px;height:92px;left:-22px;bottom:24px}
   .intro h1{font-size:clamp(60px,18vw,84px);margin-bottom:14px}
@@ -211,6 +227,16 @@ html{-webkit-text-size-adjust:100%}
   form.collab{gap:14px}
   form.collab textarea{min-height:120px}
   form.collab button.btn{width:100%}
+  .creds-strip{padding-top:16px;padding-bottom:16px;margin-bottom:44px}
+  .cs-label{font-size:14px;margin-bottom:6px}
+  .creds-strip li{font-size:15px}
+  .creds-strip li:not(:last-child)::after{margin:0 8px}
+  .services{grid-template-columns:1fr}
+  .services li{padding:14px 0 18px}
+  .services li::before{font-size:14px;margin-bottom:4px}
+  .services h3{font-size:26px;margin-bottom:6px}
+  .services p{font-size:16px}
+  .services-cta .btn{margin-top:4px}
   footer .wrap{padding-top:16px;padding-bottom:28px}
 }
 
@@ -223,6 +249,7 @@ html{-webkit-text-size-adjust:100%}
     <a class="logo" href="/">Dawn <span>K.</span> Perry</a>
     <nav aria-label="Main">
       <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#book">Book</a>
       <a href="#recipes">Recipes</a>
       <a href="#writing">Writing</a>
@@ -247,6 +274,13 @@ html{-webkit-text-size-adjust:100%}
   </div>
 </div>
 
+<div class="wrap creds-strip" aria-label="Publications and brands Dawn has worked with">
+  <p class="cs-label">Work featured in and made with</p>
+  <ul>
+    <li>The New York Times</li><li>The Washington Post</li><li>Bon Appétit</li><li>Real Simple</li><li>Food &amp; Wine</li><li>Epicurious</li><li>Breville</li><li>Williams Sonoma</li><li>OXO</li><li>Marley Spoon</li><li>Simon &amp; Schuster</li>
+  </ul>
+</div>
+
 <section id="about">
   <div class="wrap">
     <h2 class="sec-title">About</h2>
@@ -259,6 +293,20 @@ html{-webkit-text-size-adjust:100%}
         <p>Her work has appeared in Epicurious, Tasting Table, <i>Food &amp; Wine</i>, <i>Southern Living</i>, and <i>Country Living</i>, and she wrote the <a href="https://www.shortstackeditions.com/products/vol-28-cucumbers-by-dawn-perry" target="_blank" rel="noopener"><i>Cucumbers</i></a> volume of Short Stack Editions. A few favorites: <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/pumpkin-muffins" target="_blank" rel="noopener">pumpkin muffins</a> for <i>Real Simple</i>, <a href="https://www.bonappetit.com/recipe/banana-bread" target="_blank" rel="noopener">banana bread</a> for <i>Bon Appétit</i>, <a href="https://www.epicurious.com/recipes/food/views/egg-curry-with-tomatoes-and-cilantro" target="_blank" rel="noopener">egg curry</a> for Epicurious, and <a href="https://www.foodandwine.com/chefs/communal-table-how-to-be-a-boss" target="_blank" rel="noopener">Communal Table</a> for <i>Food &amp; Wine</i>.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="sec-title">What Dawn does</h2>
+    <ol class="services">
+      <li><h3>Editorial direction</h3><p>Content strategy and food programs built from the ground up, most recently as editorial director of Breville+.</p></li>
+      <li><h3>Recipe development</h3><p>Reliable, delicious recipes tested for magazines, brands, meal kits, and appliances.</p></li>
+      <li><h3>Writing and editing</h3><p>Features, service pieces, and cookbooks, from <i>The New York Times</i> to her own <i>Ready, Set, Cook</i>.</p></li>
+      <li><h3>Brand partnerships</h3><p>Recipes and storytelling for food and kitchen brands, shared with 21K home cooks on Instagram.</p></li>
+      <li><h3>Classes and events</h3><p>Live and virtual cooking classes, like Countertop Cooking School with Breville and Williams Sonoma.</p></li>
+    </ol>
+    <p class="services-cta"><a class="btn" href="#contact">Start a project</a></p>
   </div>
 </section>
 
@@ -285,24 +333,24 @@ html{-webkit-text-size-adjust:100%}
     <div class="collage">
       <a href="http://www.bonappetit.com/recipe/rigatoni-lemon-chile-pesto-grated-egg" target="_blank" rel="noopener"><figure><img src="images/rigatoni-lemon-chile-pesto.jpg" alt="Rigatoni with lemon-chile pesto and grated egg" loading="lazy"><figcaption>Rigatoni with lemon-chile pesto and grated egg<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/winter-spaghetti-with-garlic-calabrian-chiles-recipe" target="_blank" rel="noopener"><figure><img src="images/winter-spaghetti.jpg" alt="Winter spaghetti with garlic and Calabrian chiles" loading="lazy"><figcaption>Winter spaghetti with garlic and Calabrian chiles<span>Real Simple</span></figcaption></figure></a>
-      <figure><img src="images/rs-0418miy-18.jpg" alt="Recipe photograph" loading="lazy"></figure>
+      <figure><img src="images/rs-0418miy-18.jpg" alt="Pancakes with maple syrup" loading="lazy"><figcaption>Pancakes with maple syrup<span>Real Simple</span></figcaption></figure>
       <a href="http://www.bonappetit.com/recipe/shrimp-with-fresh-corn-grits" target="_blank" rel="noopener"><figure><img src="images/shrimp-corn-grits.jpg" alt="Shrimp with fresh corn grits" loading="lazy"><figcaption>Shrimp with fresh corn grits<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/make-it-yourself-birthday-cake" target="_blank" rel="noopener"><figure><img src="images/birthday-cake.jpg" alt="Make-it-yourself birthday cake" loading="lazy"><figcaption>Make-it-yourself birthday cake<span>Real Simple</span></figcaption></figure></a>
-      <figure><img src="images/sku0880.jpg" alt="Recipe photograph" loading="lazy"></figure>
+      <figure><img src="images/sku0880.jpg" alt="Biscuit-topped skillet cobbler" loading="lazy"><figcaption>Biscuit-topped skillet cobbler<span>Marley Spoon</span></figcaption></figure>
       <a href="http://www.bonappetit.com/recipe/duck-confit-with-spicy-pickled-raisins" target="_blank" rel="noopener"><figure><img src="images/duck-confit.jpg" alt="Duck confit with spicy pickled raisins" loading="lazy"><figcaption>Duck confit with spicy pickled raisins<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/vanilla-peaches-in-rose" target="_blank" rel="noopener"><figure><img src="images/vanilla-peaches.jpg" alt="Vanilla peaches in rosé" loading="lazy"><figcaption>Vanilla peaches in rosé<span>Real Simple</span></figcaption></figure></a>
-      <figure><img src="images/rs-0218foo-23.jpg" alt="Recipe photograph" loading="lazy"></figure>
+      <figure><img src="images/rs-0218foo-23.jpg" alt="Ginger-scallion chicken broth" loading="lazy"><figcaption>Ginger-scallion chicken broth<span>Real Simple</span></figcaption></figure>
       <a href="http://www.bonappetit.com/recipe/extra-buttery-mashed-potatoes" target="_blank" rel="noopener"><figure><img src="images/mashed-potatoes.jpg" alt="Extra-buttery mashed potatoes" loading="lazy"><figcaption>Extra-buttery mashed potatoes<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/kiwi-cucumber-relish" target="_blank" rel="noopener"><figure><img src="images/kiwi-cucumber-relish.jpg" alt="Kiwi-cucumber relish" loading="lazy"><figcaption>Kiwi-cucumber relish<span>Real Simple</span></figcaption></figure></a>
-      <figure><img src="images/sku0842.jpg" alt="Recipe photograph" loading="lazy"></figure>
+      <figure><img src="images/sku0842.jpg" alt="Orecchiette with toasted breadcrumbs and lemon" loading="lazy"><figcaption>Orecchiette with toasted breadcrumbs and lemon<span>Marley Spoon</span></figcaption></figure>
       <a href="http://www.bonappetit.com/recipe/spiced-black-lentils-with-yogurt-and-mint" target="_blank" rel="noopener"><figure><img src="images/black-lentils.jpg" alt="Spiced black lentils with yogurt and mint" loading="lazy"><figcaption>Spiced black lentils with yogurt and mint<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/chocolate-dipped-coconut-pops" target="_blank" rel="noopener"><figure><img src="images/coconut-pops.jpg" alt="Chocolate-dipped coconut pops" loading="lazy"><figcaption>Chocolate-dipped coconut pops<span>Real Simple</span></figcaption></figure></a>
-      <figure><img src="images/rs-0717kno-58.jpg" alt="Recipe photograph" loading="lazy"></figure>
+      <figure><img src="images/rs-0717kno-58.jpg" alt="Cast-iron steak and carrots" loading="lazy"><figcaption>Cast-iron steak and carrots<span>Real Simple</span></figcaption></figure>
       <a href="http://www.bonappetit.com/recipe/skillet-roast-chicken-with-fennel-parsnips-and-scallions" target="_blank" rel="noopener"><figure><img src="images/skillet-roast-chicken.jpg" alt="Skillet roast chicken with fennel, parsnips, and scallions" loading="lazy"><figcaption>Skillet roast chicken with fennel, parsnips, and scallions<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/cranberry-strawberry-crumb-pie" target="_blank" rel="noopener"><figure><img src="images/cranberry-strawberry-pie.png" alt="Cranberry-strawberry crumb pie" loading="lazy"><figcaption>Cranberry-strawberry crumb pie<span>Real Simple</span></figcaption></figure></a>
-      <figure><img src="images/sku0tk3.jpg" alt="Recipe photograph" loading="lazy"></figure>
+      <figure><img src="images/sku0tk3.jpg" alt="Crêpes with spiced potatoes and peas" loading="lazy"><figcaption>Crêpes with spiced potatoes and peas<span>Marley Spoon</span></figcaption></figure>
       <a href="http://www.bonappetit.com/recipe/mussels-with-white-wine" target="_blank" rel="noopener"><figure><img src="images/mussels-white-wine.jpg" alt="Mussels with white wine" loading="lazy"><figcaption>Mussels with white wine<span>Bon Appétit</span></figcaption></figure></a>
-      <figure><img src="images/sku0995.jpg" alt="Recipe photograph" loading="lazy"></figure>
+      <figure><img src="images/sku0995.jpg" alt="Chickpea grain bowls with yogurt sauce" loading="lazy"><figcaption>Chickpea grain bowls with yogurt sauce<span>Marley Spoon</span></figcaption></figure>
     </div>
   </div>
 </section>
