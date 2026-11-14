@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dawn K. Perry</title>
-<meta name="description" content="Dawn K. Perry is a writer, editor, recipe developer, and the author of Ready, Set, Cook. Formerly of Real Simple and Bon Appétit.">
+<meta name="description" content="Dawn K. Perry is a writer, editor, recipe developer, and the author of Ready, Set, Cook. Editorial director of Breville+, formerly of Real Simple and Bon Appétit.">
 <link rel="canonical" href="https://dawnkperry.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dawn K. Perry">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Dawn K. Perry","url":"https://dawnkperry.com/","jobTitle":"Writer and editor","email":"mailto:dawnkperry@gmail.com","sameAs":["https://www.instagram.com/dawnkperry/"],
+{"@context":"https://schema.org","@type":"Person","name":"Dawn K. Perry","url":"https://dawnkperry.com/","jobTitle":"Editorial Director, Breville+","email":"mailto:dawnkperry@gmail.com","sameAs":["https://www.instagram.com/dawnkperry/"],
 "subjectOf":{"@type":"Book","name":"Ready, Set, Cook","author":{"@type":"Person","name":"Dawn Perry"},"isbn":"9781982147266","publisher":"Simon & Schuster"}}
 </script>
 <style>
@@ -118,6 +118,45 @@ section{padding:0 0 104px}
 .contact .row{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
 .contact .row a:not(.btn){font-size:19px}
 
+/* instagram */
+.ig-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.ig-handle{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(44px,7vw,92px);line-height:.88;text-decoration:none;color:var(--ink);display:block}
+.ig-handle span{color:var(--orange)}
+.ig-handle:hover{color:var(--ink)}
+.ig-meta{color:var(--muted);margin-top:12px;font-size:18px}
+.ig-meta b{color:var(--ink);font-weight:500}
+.ig-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.ig-grid a{position:relative;display:block;overflow:hidden;border-radius:14px;background:#E6DED1}
+.ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+.ig-grid a:hover img{transform:scale(1.06)}
+.ig-grid a::after{content:"";position:absolute;inset:0;background:rgba(216,111,43,0);transition:background .3s}
+.ig-grid a:hover::after{background:rgba(216,111,43,.18)}
+@media(max-width:900px){.ig-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* work with dawn */
+#contact{background:#F1E6D6;padding:88px 0 104px;margin:0}
+.work{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.work .intro-copy p{font-size:21px;line-height:1.45;margin-bottom:16px;max-width:22em}
+.work .alt{font-size:16px;color:var(--muted);margin-top:22px}
+.work .alt a{text-decoration-color:var(--muted)}
+form.collab{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+form.collab .full{grid-column:1/-1}
+form.collab label{display:block;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-bottom:6px}
+form.collab label small{font-family:var(--serif);text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted);font-size:14px}
+form.collab input,form.collab select,form.collab textarea{width:100%;font:inherit;font-size:18px;color:var(--ink);background:#FFFDF9;border:1px solid #D9CBB5;border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+form.collab textarea{min-height:150px;resize:vertical}
+form.collab select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231F1B18' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+form.collab input:focus,form.collab select:focus,form.collab textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(216,111,43,.18)}
+form.collab .err{display:block;color:#B3261E;font-size:14px;margin-top:5px;min-height:0}
+form.collab .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+form.collab button.btn{border:0;cursor:pointer;justify-self:start}
+form.collab button.btn[disabled]{opacity:.6;cursor:wait}
+.form-status{grid-column:1/-1;font-size:17px}
+.form-status.bad{color:#B3261E}
+.thanks{display:none;background:#FFFDF9;border:1px solid #D9CBB5;border-radius:14px;padding:32px}
+.thanks h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:40px;line-height:.95;color:var(--orange);margin-bottom:10px}
+@media(max-width:820px){.work{grid-template-columns:1fr;gap:36px}form.collab{grid-template-columns:1fr}}
+
 footer .wrap{border-top:1px solid var(--rule);padding-top:20px;padding-bottom:36px;color:var(--muted);font-size:15px}
 </style>
 </head>
@@ -131,7 +170,8 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:20px;padding-bottom:36
       <a href="#writing">Writing</a>
       <a href="#recipes">Recipes</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#contact">Work with Dawn</a>
     </nav>
   </div>
 </header>
@@ -141,7 +181,7 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:20px;padding-bottom:36
   <div>
     <h1>Dawn <em>K.</em> Perry</h1>
     <p class="lede">Writer, editor, and recipe developer. Author of <i>Ready, Set, Cook</i>.</p>
-    <p class="creds">Formerly food director at <i>Real Simple</i> and senior food editor at <i>Bon Appétit</i>.</p>
+    <p class="creds">Editorial director of Breville+. Formerly food director at <i>Real Simple</i> and senior food editor at <i>Bon Appétit</i>.</p>
   </div>
   <div class="portrait">
     <img src="images/portrait.jpg" alt="Dawn K. Perry" width="900" height="1125" fetchpriority="high">
@@ -223,7 +263,7 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:20px;padding-bottom:36
         <small>Photo by Linda Pugliese</small>
       </figure>
       <div>
-        <p class="lead">Dawn K. Perry is a writer, editor, and the author of <i>Ready, Set, Cook</i> (Simon &amp; Schuster). Most recently she was food director at <i>Real Simple</i>.</p>
+        <p class="lead">Dawn K. Perry is a writer, editor, and the author of <i>Ready, Set, Cook</i> (Simon &amp; Schuster). She is the editorial director of Breville+, and before that was food director at <i>Real Simple</i>.</p>
         <p>She started out in the pastry and savory kitchens at Quince and worked as a private chef before becoming associate food editor at <i>Everyday Food</i>. In the <i>Real Simple</i> test kitchen, a cake feature she wrote was nominated for an IACP award.</p>
         <p>At <i>Bon Appétit</i> she was senior food editor and then the magazine's first digital food editor, working on the IBM Chef Watson partnership and the James Beard Award-winning Cook Like a Pro package. She was also culinary content editor at Marley Spoon, where she was employee number nine.</p>
         <p>Her work has appeared in Epicurious, Tasting Table, <i>Food &amp; Wine</i>, <i>Southern Living</i>, and <i>Country Living</i>, and she wrote the <a href="https://www.shortstackeditions.com/products/vol-28-cucumbers-by-dawn-perry" target="_blank" rel="noopener"><i>Cucumbers</i></a> volume of Short Stack Editions. A few favorites: <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/pumpkin-muffins" target="_blank" rel="noopener">pumpkin muffins</a> for <i>Real Simple</i>, <a href="https://www.bonappetit.com/recipe/banana-bread" target="_blank" rel="noopener">banana bread</a> for <i>Bon Appétit</i>, <a href="https://www.epicurious.com/recipes/food/views/egg-curry-with-tomatoes-and-cilantro" target="_blank" rel="noopener">egg curry</a> for Epicurious, and <a href="https://www.foodandwine.com/chefs/communal-table-how-to-be-a-boss" target="_blank" rel="noopener">Communal Table</a> for <i>Food &amp; Wine</i>.</p>
@@ -232,20 +272,95 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:20px;padding-bottom:36
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="instagram">
   <div class="wrap">
-    <h2 class="sec-title">Contact</h2>
-    <p>For writing, editing, and recipe development:</p>
-    <p class="email"><a href="mailto:dawnkperry@gmail.com">dawnkperry@gmail.com</a></p>
-    <div class="row">
-      <a class="btn" href="mailto:dawnkperry@gmail.com">Email Dawn</a>
-      <a href="https://www.instagram.com/dawnkperry/" target="_blank" rel="noopener">Instagram @dawnkperry</a>
+    <div class="ig-head">
+      <div>
+        <a class="ig-handle" href="https://www.instagram.com/dawnkperry/" target="_blank" rel="noopener"><span>@</span>dawnkperry</a>
+        <p class="ig-meta"><b>21.2K followers</b> · Recipes, cooking classes, and what's for dinner.</p>
+      </div>
+      <a class="btn" href="https://www.instagram.com/dawnkperry/" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
+    <div class="ig-grid">
+      <a href="https://www.instagram.com/dawnkperry/p/DGjZUyZyso9/" target="_blank" rel="noopener" aria-label="Working-from-home lunch: crispy halloumi salad (opens Instagram)"><img src="images/ig-1.jpg" alt="Working-from-home lunch: crispy halloumi salad" width="720" height="720" loading="lazy"></a>
+      <a href="https://www.instagram.com/dawnkperry/p/DL-bhTvJ_UF/" target="_blank" rel="noopener" aria-label="Key lime pie mousse (opens Instagram)"><img src="images/ig-2.jpg" alt="Key lime pie mousse" width="720" height="720" loading="lazy"></a>
+      <a href="https://www.instagram.com/dawnkperry/p/DFtNG1pzbLj/" target="_blank" rel="noopener" aria-label="Turkey chili (opens Instagram)"><img src="images/ig-3.jpg" alt="Turkey chili" width="720" height="720" loading="lazy"></a>
+      <a href="https://www.instagram.com/dawnkperry/p/DIEqtiAPUO3/" target="_blank" rel="noopener" aria-label="Big-batch baking: a tray of cookies (opens Instagram)"><img src="images/ig-4.jpg" alt="Big-batch baking: a tray of cookies" width="720" height="720" loading="lazy"></a>
+      <a href="https://www.instagram.com/dawnkperry/p/CoVwXzYPHqV/" target="_blank" rel="noopener" aria-label="Oatmeal with very ripe persimmon (opens Instagram)"><img src="images/ig-5.jpg" alt="Oatmeal with very ripe persimmon" width="720" height="720" loading="lazy"></a>
+      <a href="https://www.instagram.com/dawnkperry/p/DGBtHueSSdd/" target="_blank" rel="noopener" aria-label="Pork braised in a pot (opens Instagram)"><img src="images/ig-6.jpg" alt="Pork braised in a pot" width="720" height="720" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="sec-title">Work with Dawn</h2>
+    <div class="work">
+      <div class="intro-copy">
+        <p>Recipe development, writing and editing, brand content, Instagram partnerships, and cooking classes.</p>
+        <p>Tell Dawn a little about your project and she'll be in touch.</p>
+        <p class="alt">Prefer email? <a href="mailto:collaboratewithdawn@gmail.com">collaboratewithdawn@gmail.com</a><br>Everything else: <a href="mailto:dawnkperry@gmail.com">dawnkperry@gmail.com</a></p>
+      </div>
+      <div>
+        <form class="collab" id="collab" novalidate>
+          <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" data-for="f-name"></span></div>
+          <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" data-for="f-email"></span></div>
+          <div><label for="f-brand">Brand or company <small>(optional)</small></label><input id="f-brand" name="brand" autocomplete="organization"></div>
+          <div><label for="f-type">Project type</label><select id="f-type" name="project_type" required>
+            <option value="">Choose one</option>
+            <option>Recipe development</option>
+            <option>Writing and editing</option>
+            <option>Brand content</option>
+            <option>Instagram partnership</option>
+            <option>Cooking class or event</option>
+            <option>Something else</option>
+          </select><span class="err" data-for="f-type"></span></div>
+          <div class="full"><label for="f-when">Timeline <small>(optional)</small></label><input id="f-when" name="timeline" placeholder="For example, a spring campaign launching in March"></div>
+          <div class="full"><label for="f-msg">Tell her about it</label><textarea id="f-msg" name="message" required placeholder="What you're making, who it's for, and how Dawn can help"></textarea><span class="err" data-for="f-msg"></span></div>
+          <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></div>
+          <div class="full"><button class="btn" type="submit">Send to Dawn</button></div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="thanks" id="thanks" role="status" aria-live="polite">
+          <h3>Thank you!</h3>
+          <p>Your note is on its way to Dawn. She'll reply to the email you shared.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
 <footer><div class="wrap">© <span id="yr">2026</span> Dawn K. Perry</div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var f=document.getElementById('collab'); if(!f) return;
+  var status=f.querySelector('.form-status'), btn=f.querySelector('button[type=submit]');
+  function setErr(id,msg){var e=f.querySelector('.err[data-for="'+id+'"]'); if(e) e.textContent=msg||'';}
+  ['f-name','f-email','f-type','f-msg'].forEach(function(id){var el=document.getElementById(id); el.addEventListener('input',function(){setErr(id,'')}); el.addEventListener('change',function(){setErr(id,'')});});
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); status.textContent=''; status.className='form-status';
+    var ok=true, v=function(id){return document.getElementById(id).value.trim()};
+    if(!v('f-name')){setErr('f-name','Add your name');ok=false}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('f-email'))){setErr('f-email','Add a valid email so Dawn can reply');ok=false}
+    if(!v('f-type')){setErr('f-type','Choose a project type');ok=false}
+    if(v('f-msg').length<10){setErr('f-msg','Add a few words about your project');ok=false}
+    if(!ok) return;
+    if(v('f-hp')) return;
+    btn.disabled=true; btn.textContent='Sending…';
+    var data={name:v('f-name'),email:v('f-email'),brand:v('f-brand'),project_type:v('f-type'),timeline:v('f-when'),message:v('f-msg'),
+      _subject:'Collab inquiry: '+v('f-type')+' from '+v('f-name')+(v('f-brand')?' ('+v('f-brand')+')':''),_replyto:v('f-email'),_template:'table',_captcha:'false'};
+    fetch('https://formsubmit.co/ajax/collaboratewithdawn@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j}})})
+      .then(function(res){
+        if(res.ok && String(res.j.success)==='true'){f.style.display='none';document.getElementById('thanks').style.display='block';}
+        else throw new Error((res.j&&res.j.message)||'Send failed');
+      })
+      .catch(function(){status.className='form-status bad';status.innerHTML='That didn\u2019t go through. Try again, or email <a href="mailto:collaboratewithdawn@gmail.com">collaboratewithdawn@gmail.com</a>.';})
+      .finally(function(){btn.disabled=false;btn.textContent='Send to Dawn';});
+  });
+})();
+</script>
 </body>
 </html>
