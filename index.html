@@ -164,7 +164,8 @@ p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0
 .sec-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;margin-bottom:44px}
 .sec-head .sec-title{margin-bottom:0}
 .sec-head .say-wrap{margin-right:20px}
-.work .think{margin-top:34px;width:270px}
+.work .intro-copy{display:flex;flex-direction:column}
+.work .intro-copy .think{order:2;margin-top:34px;width:270px}
 .work .intro-copy .think p{font-size:18px;line-height:1.14;margin:0;max-width:none}
 /* About: text wraps around the cloud */
 .about{max-width:1010px}
@@ -172,7 +173,7 @@ p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0
 .about::after{content:"";display:block;clear:both}
 .about .think{float:right;width:320px;margin:46px -14px 0 30px;shape-outside:polygon(46.9% 1.5%,100% 1.5%,100% 87.7%,46.9% 88.5%,31.3% 85.4%,21.9% 83.8%,12.5% 90.8%,5.6% 100.8%,0% 100.8%,0% 92.3%,5% 82.3%,10.6% 75.4%,11.3% 61.5%,9.4% 42.3%,15.6% 23.1%,29.7% 6.9%) content-box;shape-margin:16px}
 @media(max-width:980px){.book .say-wrap{right:-40px;top:auto;bottom:-44px}.book .cover{margin-bottom:44px}}
-@media(max-width:700px){.about{display:flex;flex-direction:column-reverse}.about .think{float:none;shape-outside:none;width:220px;margin:22px 4px 0 auto}}
+@media(max-width:700px){.about .think{width:158px;margin:96px -6px 0 8px;shape-margin:8px}.about .think p{font-size:12.5px}.work .intro-copy{display:block}.work .intro-copy .think{float:right;width:150px;margin:0 -6px 4px 10px;shape-outside:polygon(36% 1%,100% 1%,100% 100%,30% 93%,14% 86%,4% 72%,2% 56%,6% 40%,14% 24%,24% 9%) content-box;shape-margin:8px}.work .intro-copy .think p{font-size:12px}}
 
 /* services */
 .services{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;counter-reset:svc}
@@ -258,8 +259,6 @@ html{-webkit-text-size-adjust:100%}
   .about .bio{font-size:19px;line-height:1.5}
   .sec-head{margin-bottom:26px}
   .sec-head .say-wrap{margin:0 10px 10px auto}
-  .work .think{width:210px;margin:18px 10px 0 auto}
-  .work .intro-copy .think p{font-size:14.5px}
   .think p{font-size:17px}
   p.say.bubble{font-size:17px;width:190px;padding:15px 18px 17px}
   .say-wrap::after{left:26px;bottom:-17px;width:28px;height:22px}
@@ -469,10 +468,10 @@ html{-webkit-text-size-adjust:100%}
     <h2 class="sec-title">Work with Dawn</h2>
     <div class="work">
       <div class="intro-copy">
+        <figure class="think bubble pop sky"><svg viewBox="0 0 320 260" aria-hidden="true"><g class="puff" fill="#F6DD8E"><ellipse cx="140" cy="118" rx="112" ry="72"/><circle cx="72" cy="92" r="48"/><circle cx="128" cy="58" r="52"/><circle cx="196" cy="62" r="50"/><circle cx="244" cy="104" r="44"/><circle cx="234" cy="158" r="40"/><circle cx="176" cy="182" r="46"/><circle cx="108" cy="180" r="46"/><circle cx="50" cy="148" r="40"/></g><g fill="#F6DD8E"><circle class="dot d1" cx="310" cy="252" r="6"/><circle class="dot d2" cx="294" cy="230" r="10"/><circle class="dot d3" cx="268" cy="204" r="15"/></g></svg><p>So, what<br>are we<br>cooking up?</p></figure>
         <p>Recipe development, writing and editing, brand content, Instagram partnerships, and cooking classes.</p>
         <p>Tell Dawn a little about your project and she'll be in touch.</p>
         <p class="alt">Prefer email? <a href="mailto:collaboratewithdawn@gmail.com">collaboratewithdawn@gmail.com</a></p>
-        <figure class="think bubble pop sky"><svg viewBox="0 0 320 260" aria-hidden="true"><g class="puff" fill="#F6DD8E"><ellipse cx="140" cy="118" rx="112" ry="72"/><circle cx="72" cy="92" r="48"/><circle cx="128" cy="58" r="52"/><circle cx="196" cy="62" r="50"/><circle cx="244" cy="104" r="44"/><circle cx="234" cy="158" r="40"/><circle cx="176" cy="182" r="46"/><circle cx="108" cy="180" r="46"/><circle cx="50" cy="148" r="40"/></g><g fill="#F6DD8E"><circle class="dot d1" cx="310" cy="252" r="6"/><circle class="dot d2" cx="294" cy="230" r="10"/><circle class="dot d3" cx="268" cy="204" r="15"/></g></svg><p>So, what<br>are we<br>cooking up?</p></figure>
       </div>
       <div>
         <form class="collab" id="collab" novalidate>
