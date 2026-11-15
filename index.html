@@ -138,6 +138,9 @@ p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0
 .think .puff,.think .dot{transform-box:fill-box;transform-origin:center}
 .think p{position:absolute;left:8%;right:20%;top:20%;bottom:30%;display:flex;align-items:center;justify-content:center;text-align:center;text-transform:uppercase;font-size:21px;letter-spacing:.04em}
 .think.flip p{left:20%;right:8%}
+.think svg g{fill:var(--cloud,#F6DD8E)}
+.think.sky{--cloud:#A9CCD9}
+.think.sky p{left:12%;right:27%;top:21%;bottom:33%}
 /* bubble motion: dots pop in one by one, cloud puffs up, then it drifts and the dots keep "thinking" */
 .js .pop:not(.in){opacity:0}
 .js .think.pop:not(.in){opacity:1}
@@ -158,10 +161,16 @@ p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0
 @media(prefers-reduced-motion:reduce){.think,.think *,.say-wrap{animation:none!important}}
 .book .cover{position:relative}
 .book .say-wrap{position:absolute;right:-70px;top:56%;z-index:2}
+.sec-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;margin-bottom:44px}
+.sec-head .sec-title{margin-bottom:0}
+.sec-head .say-wrap{margin-right:20px}
+.work .think{margin-top:34px;width:270px}
+.work .intro-copy .think p{font-size:18px;line-height:1.14;margin:0;max-width:none}
 /* About: text wraps around the cloud */
-.about{max-width:1000px}
+.about{max-width:1010px}
+.about .bio{hyphens:manual}
 .about::after{content:"";display:block;clear:both}
-.about .think{float:right;width:290px;margin:-4px -10px 8px 34px;shape-outside:polygon(46.9% 1.5%,100% 1.5%,100% 87.7%,46.9% 88.5%,31.3% 85.4%,21.9% 83.8%,12.5% 90.8%,5.6% 100.8%,0% 100.8%,0% 92.3%,5% 82.3%,10.6% 75.4%,11.3% 61.5%,9.4% 42.3%,15.6% 23.1%,29.7% 6.9%) content-box;shape-margin:16px}
+.about .think{float:right;width:320px;margin:46px -14px 0 30px;shape-outside:polygon(46.9% 1.5%,100% 1.5%,100% 87.7%,46.9% 88.5%,31.3% 85.4%,21.9% 83.8%,12.5% 90.8%,5.6% 100.8%,0% 100.8%,0% 92.3%,5% 82.3%,10.6% 75.4%,11.3% 61.5%,9.4% 42.3%,15.6% 23.1%,29.7% 6.9%) content-box;shape-margin:16px}
 @media(max-width:980px){.book .say-wrap{right:-40px;top:auto;bottom:-44px}.book .cover{margin-bottom:44px}}
 @media(max-width:700px){.about{display:flex;flex-direction:column-reverse}.about .think{float:none;shape-outside:none;width:220px;margin:22px 4px 0 auto}}
 
@@ -247,6 +256,10 @@ html{-webkit-text-size-adjust:100%}
   section{padding-bottom:56px}
   .sec-title{font-size:38px;margin-bottom:20px}
   .about .bio{font-size:19px;line-height:1.5}
+  .sec-head{margin-bottom:26px}
+  .sec-head .say-wrap{margin:0 10px 10px auto}
+  .work .think{width:210px;margin:18px 10px 0 auto}
+  .work .intro-copy .think p{font-size:14.5px}
   .think p{font-size:17px}
   p.say.bubble{font-size:17px;width:190px;padding:15px 18px 17px}
   .say-wrap::after{left:26px;bottom:-17px;width:28px;height:22px}
@@ -340,7 +353,7 @@ html{-webkit-text-size-adjust:100%}
   <div class="wrap">
     <h2 class="sec-title">About</h2>
     <div class="about">
-      <figure class="think bubble flip pop"><svg viewBox="0 0 320 260" aria-hidden="true"><g class="puff" fill="#F6DD8E"><ellipse cx="180" cy="118" rx="112" ry="72"/><circle cx="248" cy="92" r="48"/><circle cx="192" cy="58" r="52"/><circle cx="124" cy="62" r="50"/><circle cx="76" cy="104" r="44"/><circle cx="86" cy="158" r="40"/><circle cx="144" cy="182" r="46"/><circle cx="212" cy="180" r="46"/><circle cx="270" cy="148" r="40"/></g><g fill="#F6DD8E"><circle class="dot d1" cx="10" cy="252" r="6"/><circle class="dot d2" cx="26" cy="230" r="10"/><circle class="dot d3" cx="52" cy="204" r="15"/></g></svg><p>A sense of humor is shelf-stable.</p></figure>
+      <figure class="think bubble flip pop"><svg viewBox="0 0 320 260" aria-hidden="true"><g class="puff" fill="#F6DD8E"><ellipse cx="180" cy="118" rx="112" ry="72"/><circle cx="248" cy="92" r="48"/><circle cx="192" cy="58" r="52"/><circle cx="124" cy="62" r="50"/><circle cx="76" cy="104" r="44"/><circle cx="86" cy="158" r="40"/><circle cx="144" cy="182" r="46"/><circle cx="212" cy="180" r="46"/><circle cx="270" cy="148" r="40"/></g><g fill="#F6DD8E"><circle class="dot d1" cx="10" cy="252" r="6"/><circle class="dot d2" cx="26" cy="230" r="10"/><circle class="dot d3" cx="52" cy="204" r="15"/></g></svg><p>A sense<br>of humor is<br>shelf-stable.</p></figure>
       <p class="bio">Dawn Perry is editorial director for Breville+, Breville’s home for all things connected cooking and coffee-making. She is the former food director of <i>Real Simple</i> and has worked in the test kitchens of <i>Bon Appétit</i>, <i>Martha Stewart Living</i>, and <i>Everyday Food</i>. More of her recipes and writing have been featured in NYT Cooking, the <i>LA Times</i>, <a href="https://www.epicurious.com/recipes/food/views/egg-curry-with-tomatoes-and-cilantro" target="_blank" rel="noopener">Epicurious</a>, <a href="https://www.foodandwine.com/chefs/communal-table-how-to-be-a-boss" target="_blank" rel="noopener"><i>Food &amp; Wine</i></a>, Extra Crispy, <i>Southern Living</i>, <i>Country Living</i>, and on <i>The Lonely Hour</i>. She is the author of <a href="https://www.shortstackeditions.com/products/vol-28-cucumbers-by-dawn-perry" target="_blank" rel="noopener">Short Stack Editions’ <i>Cucumbers</i></a> (2017) and <i>Ready, Set, Cook</i> (Simon &amp; Schuster, 2021). She lives in Los Angeles with her family.</p>
     </div>
   </div>
@@ -382,7 +395,10 @@ html{-webkit-text-size-adjust:100%}
 
 <section id="recipes">
   <div class="wrap">
-    <h2 class="sec-title">Recipes</h2>
+    <div class="sec-head">
+      <h2 class="sec-title">Recipes</h2>
+      <div class="say-wrap tilt-r pop"><p class="say bubble">The most satisfying meals are often the simplest.</p></div>
+    </div>
     <div class="collage">
       <a href="http://www.bonappetit.com/recipe/rigatoni-lemon-chile-pesto-grated-egg" target="_blank" rel="noopener"><figure><img src="images/rigatoni-lemon-chile-pesto.jpg" alt="Rigatoni with lemon-chile pesto and grated egg" loading="lazy"><figcaption>Rigatoni with lemon-chile pesto and grated egg<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/winter-spaghetti-with-garlic-calabrian-chiles-recipe" target="_blank" rel="noopener"><figure><img src="images/winter-spaghetti.jpg" alt="Winter spaghetti with garlic and Calabrian chiles" loading="lazy"><figcaption>Winter spaghetti with garlic and Calabrian chiles<span>Real Simple</span></figcaption></figure></a>
@@ -456,6 +472,7 @@ html{-webkit-text-size-adjust:100%}
         <p>Recipe development, writing and editing, brand content, Instagram partnerships, and cooking classes.</p>
         <p>Tell Dawn a little about your project and she'll be in touch.</p>
         <p class="alt">Prefer email? <a href="mailto:collaboratewithdawn@gmail.com">collaboratewithdawn@gmail.com</a></p>
+        <figure class="think bubble pop sky"><svg viewBox="0 0 320 260" aria-hidden="true"><g class="puff" fill="#F6DD8E"><ellipse cx="140" cy="118" rx="112" ry="72"/><circle cx="72" cy="92" r="48"/><circle cx="128" cy="58" r="52"/><circle cx="196" cy="62" r="50"/><circle cx="244" cy="104" r="44"/><circle cx="234" cy="158" r="40"/><circle cx="176" cy="182" r="46"/><circle cx="108" cy="180" r="46"/><circle cx="50" cy="148" r="40"/></g><g fill="#F6DD8E"><circle class="dot d1" cx="310" cy="252" r="6"/><circle class="dot d2" cx="294" cy="230" r="10"/><circle class="dot d3" cx="268" cy="204" r="15"/></g></svg><p>So, what<br>are we<br>cooking up?</p></figure>
       </div>
       <div>
         <form class="collab" id="collab" novalidate>
