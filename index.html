@@ -160,7 +160,8 @@ p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0
 @keyframes sayIn{from{opacity:0;transform:scale(.3) rotate(-16deg)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.think,.think *,.say-wrap{animation:none!important}}
 .book .cover{position:relative}
-.book .say-wrap{position:absolute;right:-70px;top:56%;z-index:2}
+.book .say-wrap{display:block;width:max-content;margin:22px 0 0 150px;transform-origin:30px 0}
+.book .say-wrap::after{bottom:auto;top:-21px;clip-path:polygon(0 100%,100% 100%,0 0)}
 .sec-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;margin-bottom:44px}
 .sec-head .sec-title{margin-bottom:0}
 .sec-head .say-wrap{margin-right:20px}
@@ -172,8 +173,7 @@ p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0
 .about .bio{hyphens:manual}
 .about::after{content:"";display:block;clear:both}
 .about .think{float:right;width:320px;margin:46px -14px 0 30px;shape-outside:polygon(46.9% 1.5%,100% 1.5%,100% 87.7%,46.9% 88.5%,31.3% 85.4%,21.9% 83.8%,12.5% 90.8%,5.6% 100.8%,0% 100.8%,0% 92.3%,5% 82.3%,10.6% 75.4%,11.3% 61.5%,9.4% 42.3%,15.6% 23.1%,29.7% 6.9%) content-box;shape-margin:16px}
-@media(max-width:980px){.book .say-wrap{right:-40px;top:auto;bottom:-44px}.book .cover{margin-bottom:44px}}
-@media(max-width:820px){.book .say-wrap{right:-235px;bottom:-24px}.book .cover{margin-bottom:30px}}
+@media(max-width:820px){.book .cover{margin:0 auto}.book .say-wrap{margin:22px auto 0 calc(50% - 70px)}}
 @media(max-width:700px){.about .think{width:158px;margin:96px -6px 0 8px;shape-margin:8px}.about .think p{font-size:12.5px}.work .intro-copy{display:block}.work .intro-copy .think{float:right;width:150px;margin:0 -6px 4px 10px;shape-outside:polygon(46.9% 1.5%,100% 1.5%,100% 87.7%,46.9% 88.5%,31.3% 85.4%,21.9% 83.8%,12.5% 90.8%,5.6% 100.8%,0% 100.8%,0% 92.3%,5% 82.3%,10.6% 75.4%,11.3% 61.5%,9.4% 42.3%,15.6% 23.1%,29.7% 6.9%) content-box;shape-margin:8px}.work .intro-copy .think p{font-size:11.5px}}
 
 /* services */
@@ -263,8 +263,9 @@ html{-webkit-text-size-adjust:100%}
   .think p{font-size:17px}
   p.say.bubble{font-size:17px;width:190px;padding:15px 18px 17px}
   .say-wrap::after{left:26px;bottom:-17px;width:28px;height:22px}
-  .book .say-wrap{right:-152px;bottom:-30px}
-  .book .cover{max-width:200px;margin:0 0 40px}
+  .book .say-wrap{margin:20px auto 0 calc(50% - 60px)}
+  .book .say-wrap::after{top:-16px}
+  .book .cover{max-width:210px;margin:0 auto}
   #book{padding:48px 0 52px;margin-bottom:56px}
   .book{gap:26px}
   .book img{max-width:210px;margin:0 auto}
@@ -395,10 +396,7 @@ html{-webkit-text-size-adjust:100%}
 
 <section id="recipes">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 class="sec-title">Recipes</h2>
-      <div class="say-wrap tilt-r pop"><p class="say bubble">The most satisfying meals are often the simplest.</p></div>
-    </div>
+    <h2 class="sec-title">Recipes</h2>
     <div class="collage">
       <a href="http://www.bonappetit.com/recipe/rigatoni-lemon-chile-pesto-grated-egg" target="_blank" rel="noopener"><figure><img src="images/rigatoni-lemon-chile-pesto.jpg" alt="Rigatoni with lemon-chile pesto and grated egg" loading="lazy"><figcaption>Rigatoni with lemon-chile pesto and grated egg<span>Bon Appétit</span></figcaption></figure></a>
       <a href="https://www.realsimple.com/food-recipes/browse-all-recipes/winter-spaghetti-with-garlic-calabrian-chiles-recipe" target="_blank" rel="noopener"><figure><img src="images/winter-spaghetti.jpg" alt="Winter spaghetti with garlic and Calabrian chiles" loading="lazy"><figcaption>Winter spaghetti with garlic and Calabrian chiles<span>Real Simple</span></figcaption></figure></a>
