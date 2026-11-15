@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://dawnkperry.com/">
 <meta property="og:image" content="https://dawnkperry.com/images/portrait.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23D86F2B'/><text x='32' y='43' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='30' text-anchor='middle' fill='%23F7F3EC'>DP</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23C23B2E'/><text x='32' y='43' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='30' text-anchor='middle' fill='%23F7F3EC'>DP</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
 <style>
 :root{
   --bg:#F7F3EC;--ink:#1F1B18;--muted:#6E655C;--rule:#E2D9CC;
-  --orange:#D86F2B;--orange-dk:#B85A1E;--butter:#F6DD8E;
+  --accent:#C23B2E;--accent-dk:#9C2D22;--accent-rgb:194,59,46;--butter:#F6DD8E;
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --display:"Barlow Condensed","Arial Narrow",sans-serif;
 }
@@ -32,17 +32,17 @@
 body{background:var(--bg);color:var(--ink);font:400 19px/1.6 var(--serif);-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{color:var(--orange);text-decoration-color:var(--orange)}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
 i,em{font-style:italic}
 .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
 .caps{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.01em}
-.btn{display:inline-block;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:17px;line-height:1;padding:15px 26px 14px;border-radius:999px;background:var(--orange);color:#fff;text-decoration:none;transition:background .2s,transform .2s}
-.btn:hover{background:var(--orange-dk);color:#fff;transform:translateY(-1px)}
+.btn{display:inline-block;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:17px;line-height:1;padding:15px 26px 14px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;transition:background .2s,transform .2s}
+.btn:hover{background:var(--accent-dk);color:#fff;transform:translateY(-1px)}
 
 /* header */
 header .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:24px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
 .logo{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:18px;text-decoration:none}
-.logo span{color:var(--orange)}
+.logo span{color:var(--accent)}
 nav{display:flex;gap:26px;font-size:17px}
 nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--ink)}
@@ -51,7 +51,7 @@ nav a:hover{color:var(--ink)}
 /* intro */
 .intro{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-top:56px;padding-bottom:64px}
 .intro h1{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(68px,10.5vw,138px);line-height:.88;letter-spacing:-.005em;margin-bottom:28px}
-.intro h1 em{font-style:normal;color:var(--orange)}
+.intro h1 em{font-style:normal;color:var(--accent)}
 .intro .lede{font-size:24px;line-height:1.4;max-width:22em}
 .intro .creds{margin-top:14px;font-size:18px;color:var(--muted);max-width:28em}
 .hero-cta{margin-top:30px}
@@ -66,7 +66,7 @@ html{scroll-behavior:smooth}
 
 /* sections */
 section{padding:0 0 104px}
-.sec-title{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(36px,4.4vw,54px);line-height:.95;letter-spacing:.01em;color:var(--orange);margin-bottom:36px}
+.sec-title{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(36px,4.4vw,54px);line-height:.95;letter-spacing:.01em;color:var(--accent);margin-bottom:36px}
 
 /* book */
 #book{background:var(--butter);padding:88px 0 96px;margin-bottom:104px}
@@ -85,9 +85,9 @@ section{padding:0 0 104px}
 .clips{list-style:none;border-top:1px solid var(--rule)}
 .clips li{border-bottom:1px solid var(--rule)}
 .clips a{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:baseline;padding:16px 0;text-decoration:none}
-.clips .pub{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:17px;color:var(--orange)}
+.clips .pub{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:17px;color:var(--accent)}
 .clips .title{font-size:22px;line-height:1.3;transition:color .2s}
-.clips a:hover .title{color:var(--orange)}
+.clips a:hover .title{color:var(--accent)}
 .clips .pdf{font-size:15px;color:var(--muted);margin-left:6px}
 @media(max-width:640px){.clips a{grid-template-columns:1fr;gap:2px}}
 
@@ -108,14 +108,22 @@ section{padding:0 0 104px}
 /* credentials strip */
 .creds-strip{padding-top:22px;padding-bottom:22px;margin-bottom:72px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .cs-label{font-size:15px;color:var(--muted);margin-bottom:8px}
-.creds-strip ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 0}
-.creds-strip li{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(17px,1.7vw,21px);color:var(--ink)}
-.creds-strip li:not(:last-child)::after{content:"·";color:var(--orange);margin:0 12px}
+.ticker{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:tick 38s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker ul{list-style:none;display:flex;align-items:center;flex-shrink:0}
+.ticker li{display:flex;align-items:center;white-space:nowrap;color:var(--ink);font-size:clamp(20px,2vw,26px);line-height:1.1}
+.ticker li::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);margin:0 clamp(22px,2.6vw,38px)}
+.ticker .t-caps{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.ticker .t-serif{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.01em}
+.ticker .t-wide{font-family:var(--display);font-weight:500;text-transform:uppercase;letter-spacing:.22em;font-size:.82em}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker{-webkit-mask-image:none;mask-image:none}.ticker-track{animation:none;width:auto}.ticker ul{flex-wrap:wrap;row-gap:8px}.ticker ul[aria-hidden]{display:none}}
 
 /* services */
 .services{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;counter-reset:svc}
 .services li{counter-increment:svc;border-top:1px solid var(--ink);padding:18px 0 30px}
-.services li::before{content:counter(svc,decimal-leading-zero);display:block;font-family:var(--display);font-weight:600;color:var(--orange);font-size:16px;letter-spacing:.06em;margin-bottom:8px}
+.services li::before{content:counter(svc,decimal-leading-zero);display:block;font-family:var(--display);font-weight:600;color:var(--accent);font-size:16px;letter-spacing:.06em;margin-bottom:8px}
 .services h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:30px;line-height:.95;letter-spacing:.005em;margin-bottom:10px}
 .services p{font-size:17px;line-height:1.5;color:var(--ink);max-width:22em}
 .services-cta{margin-top:8px}
@@ -131,14 +139,14 @@ section{padding:0 0 104px}
 /* contact */
 .contact p{font-size:21px;max-width:30em}
 .contact .email{font-size:clamp(24px,3vw,32px);margin:10px 0 26px}
-.contact .email a{text-decoration-color:var(--orange)}
+.contact .email a{text-decoration-color:var(--accent)}
 .contact .row{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
 .contact .row a:not(.btn){font-size:19px}
 
 /* instagram */
 .ig-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
 .ig-handle{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(44px,7vw,92px);line-height:.88;text-decoration:none;color:var(--ink);display:block}
-.ig-handle span{color:var(--orange)}
+.ig-handle span{color:var(--accent)}
 .ig-handle:hover{color:var(--ink)}
 .ig-meta{color:var(--muted);margin-top:12px;font-size:18px}
 .ig-meta b{color:var(--ink);font-weight:500}
@@ -146,8 +154,8 @@ section{padding:0 0 104px}
 .ig-grid a{position:relative;display:block;overflow:hidden;border-radius:14px;background:#E6DED1}
 .ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
 .ig-grid a:hover img{transform:scale(1.06)}
-.ig-grid a::after{content:"";position:absolute;inset:0;background:rgba(216,111,43,0);transition:background .3s}
-.ig-grid a:hover::after{background:rgba(216,111,43,.18)}
+.ig-grid a::after{content:"";position:absolute;inset:0;background:rgba(var(--accent-rgb),0);transition:background .3s}
+.ig-grid a:hover::after{background:rgba(var(--accent-rgb),.18)}
 @media(max-width:900px){.ig-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 /* work with dawn */
@@ -163,7 +171,7 @@ form.collab label small{font-family:var(--serif);text-transform:none;letter-spac
 form.collab input,form.collab select,form.collab textarea{width:100%;font:inherit;font-size:18px;color:var(--ink);background:#FFFDF9;border:1px solid #D9CBB5;border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
 form.collab textarea{min-height:150px;resize:vertical}
 form.collab select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231F1B18' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
-form.collab input:focus,form.collab select:focus,form.collab textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(216,111,43,.18)}
+form.collab input:focus,form.collab select:focus,form.collab textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(var(--accent-rgb),.18)}
 form.collab .err{display:block;color:#B3261E;font-size:14px;margin-top:5px;min-height:0}
 form.collab .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 form.collab button.btn{border:0;cursor:pointer;justify-self:start}
@@ -171,7 +179,7 @@ form.collab button.btn[disabled]{opacity:.6;cursor:wait}
 .form-status{grid-column:1/-1;font-size:17px}
 .form-status.bad{color:#B3261E}
 .thanks{display:none;background:#FFFDF9;border:1px solid #D9CBB5;border-radius:14px;padding:32px}
-.thanks h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:40px;line-height:.95;color:var(--orange);margin-bottom:10px}
+.thanks h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:40px;line-height:.95;color:var(--accent);margin-bottom:10px}
 @media(max-width:820px){.work{grid-template-columns:1fr;gap:36px}form.collab{grid-template-columns:1fr}}
 
 footer .wrap{border-top:1px solid var(--rule);padding-top:20px;padding-bottom:36px;color:var(--muted);font-size:15px}
@@ -186,7 +194,7 @@ html{-webkit-text-size-adjust:100%}
   html{scroll-padding-top:64px}
   .logo{font-size:17px}
   nav a{display:none}
-  nav a[href="#contact"]{display:inline-block;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#fff;background:var(--orange);border-radius:999px;padding:9px 14px 8px}
+  nav a[href="#contact"]{display:inline-block;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#fff;background:var(--accent);border-radius:999px;padding:9px 14px 8px}
   nav a[href="#contact"]:hover{color:#fff}
   .intro{gap:22px;padding-top:20px;padding-bottom:32px}
   .portrait{width:74%;max-width:320px}
@@ -229,8 +237,8 @@ html{-webkit-text-size-adjust:100%}
   form.collab button.btn{width:100%}
   .creds-strip{padding-top:16px;padding-bottom:16px;margin-bottom:44px}
   .cs-label{font-size:14px;margin-bottom:6px}
-  .creds-strip li{font-size:15px}
-  .creds-strip li:not(:last-child)::after{margin:0 8px}
+  .ticker li{font-size:19px}
+  .ticker-track{animation-duration:30s}
   .services{grid-template-columns:1fr}
   .services li{padding:14px 0 18px}
   .services li::before{font-size:14px;margin-bottom:4px}
@@ -269,16 +277,17 @@ html{-webkit-text-size-adjust:100%}
   <div class="portrait">
     <img src="images/portrait.jpg" alt="Dawn K. Perry" width="900" height="1125" fetchpriority="high">
     <a class="sticker" href="#book" aria-label="Ready, Set, Cook, out now">
-      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><circle cx="100" cy="100" r="98" fill="#D86F2B"/><text font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="25" fill="#F7F3EC" xml:space="preserve"><textPath href="#ring" textLength="446" lengthAdjust="spacing">READY, SET, COOK  ·  OUT NOW  ·  </textPath></text><text x="100" y="117" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="52" fill="#F7F3EC">DP</text></svg>
+      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><circle cx="100" cy="100" r="98" fill="#C23B2E"/><text font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="25" fill="#F7F3EC" xml:space="preserve"><textPath href="#ring" textLength="446" lengthAdjust="spacing">READY, SET, COOK  ·  OUT NOW  ·  </textPath></text><text x="100" y="117" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="52" fill="#F7F3EC">DP</text></svg>
     </a>
   </div>
 </div>
 
 <div class="wrap creds-strip" aria-label="Publications and brands Dawn has worked with">
   <p class="cs-label">Work featured in and made with</p>
-  <ul>
-    <li>The New York Times</li><li>The Washington Post</li><li>Bon Appétit</li><li>Real Simple</li><li>Food &amp; Wine</li><li>Epicurious</li><li>Breville</li><li>Williams Sonoma</li><li>OXO</li><li>Marley Spoon</li><li>Simon &amp; Schuster</li>
-  </ul>
+  <div class="ticker"><div class="ticker-track">
+    <ul><li class="t-serif">The New York Times</li><li class="t-caps">Bon Appétit</li><li class="t-serif">The Washington Post</li><li class="t-wide">Breville</li><li class="t-caps">Real Simple</li><li class="t-serif">Food &amp; Wine</li><li class="t-wide">Williams Sonoma</li><li class="t-caps">Epicurious</li><li class="t-wide">OXO</li><li class="t-caps">Marley Spoon</li><li class="t-serif">Simon &amp; Schuster</li></ul>
+    <ul aria-hidden="true"><li class="t-serif">The New York Times</li><li class="t-caps">Bon Appétit</li><li class="t-serif">The Washington Post</li><li class="t-wide">Breville</li><li class="t-caps">Real Simple</li><li class="t-serif">Food &amp; Wine</li><li class="t-wide">Williams Sonoma</li><li class="t-caps">Epicurious</li><li class="t-wide">OXO</li><li class="t-caps">Marley Spoon</li><li class="t-serif">Simon &amp; Schuster</li></ul>
+  </div></div>
 </div>
 
 <section id="about">
