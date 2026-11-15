@@ -125,18 +125,45 @@ section{padding:0 0 104px}
 @keyframes tick{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.ticker{-webkit-mask-image:none;mask-image:none}.ticker-track{animation:none;width:auto}.ticker ul{flex-wrap:wrap;row-gap:8px}.ticker ul[aria-hidden]{display:none}}
 
-/* word bubbles (pull quotes from Ready, Set, Cook) */
+/* word bubbles (pull quotes) */
 .bubble{font-family:"Archivo","Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--ink);line-height:1.12;letter-spacing:.02em}
-p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0;padding:20px 24px 22px;background:var(--accent);color:#FBF6EE;font-size:21px;transform:rotate(-4deg);clip-path:polygon(0 4%,100% 0,98% 100%,3% 97%)}
-.say-wrap{position:relative;display:inline-block;filter:drop-shadow(0 10px 14px rgba(60,30,10,.18))}
-.say-wrap::after{content:"";position:absolute;left:34px;bottom:-22px;width:38px;height:30px;background:var(--accent);clip-path:polygon(0 0,100% 0,0 100%);transform:rotate(-4deg)}
-.think{position:relative;width:270px;aspect-ratio:320/260;transform:rotate(-7deg)}
+.say-wrap{position:relative;display:inline-block;filter:drop-shadow(0 10px 14px rgba(60,30,10,.18));transform-origin:30px 100%}
+p.say.bubble{position:relative;display:block;width:250px;max-width:none;margin:0;padding:20px 24px 22px;background:var(--accent);color:#FBF6EE;font-size:21px;transform:rotate(var(--tilt,-4deg));clip-path:polygon(0 4%,100% 0,98% 100%,3% 97%);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.say-wrap::after{content:"";position:absolute;left:34px;bottom:-22px;width:38px;height:30px;background:var(--accent);clip-path:polygon(0 0,100% 0,0 100%);transform:rotate(var(--tilt,-4deg))}
+.say-wrap:hover p.say{transform:rotate(calc(var(--tilt,-4deg) * -.5)) scale(1.04)}
+.say-wrap.tilt-r{--tilt:3deg}
+.think{position:relative;width:270px;aspect-ratio:320/260;--tilt:-7deg;transform:rotate(var(--tilt));margin:0}
+.think.flip{--tilt:7deg}
 .think svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.think .puff,.think .dot{transform-box:fill-box;transform-origin:center}
 .think p{position:absolute;left:8%;right:20%;top:20%;bottom:30%;display:flex;align-items:center;justify-content:center;text-align:center;text-transform:uppercase;font-size:21px;letter-spacing:.04em}
+.think.flip p{left:20%;right:8%}
+/* bubble motion: dots pop in one by one, cloud puffs up, then it drifts and the dots keep "thinking" */
+.js .pop:not(.in){opacity:0}
+.js .think.pop:not(.in){opacity:1}
+.js .think.pop:not(.in) .dot,.js .think.pop:not(.in) .puff{transform:scale(0)}
+.js .think.pop:not(.in) p{opacity:0}
+.think.in .dot{animation:dotIn .32s cubic-bezier(.34,1.56,.64,1) both,dotThink 2.4s ease-in-out infinite}
+.think.in .d1{animation-delay:0s,1.4s}.think.in .d2{animation-delay:.12s,1.6s}.think.in .d3{animation-delay:.24s,1.8s}
+.think.in .puff{animation:puffIn .6s cubic-bezier(.34,1.56,.64,1) .36s both}
+.think.in p{animation:fadeUp .4s ease .72s both}
+.think.in{animation:drift 6s ease-in-out 1.4s infinite}
+.say-wrap.in{animation:sayIn .6s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes dotIn{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes dotThink{0%,60%,100%{transform:scale(1)}30%{transform:scale(1.3)}}
+@keyframes puffIn{0%{transform:scale(0)}60%{transform:scale(1.06,1.02)}100%{transform:scale(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:rotate(var(--tilt)) translateY(0)}50%{transform:rotate(calc(var(--tilt) * .6)) translateY(-8px)}}
+@keyframes sayIn{from{opacity:0;transform:scale(.3) rotate(-16deg)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.think,.think *,.say-wrap{animation:none!important}}
 .book .cover{position:relative}
 .book .say-wrap{position:absolute;right:-70px;top:56%;z-index:2}
-.about{display:grid;grid-template-columns:minmax(0,46em) auto;gap:56px;align-items:center;max-width:none}
-@media(max-width:980px){.book .say-wrap{right:-40px;top:auto;bottom:-44px}.book .cover{margin-bottom:44px}.about{grid-template-columns:1fr;gap:26px}.about .think{justify-self:end;margin-right:6px}}
+/* About: text wraps around the cloud */
+.about{max-width:1000px}
+.about::after{content:"";display:block;clear:both}
+.about .think{float:right;width:290px;margin:-4px -10px 8px 34px;shape-outside:polygon(46.9% 1.5%,100% 1.5%,100% 87.7%,46.9% 88.5%,31.3% 85.4%,21.9% 83.8%,12.5% 90.8%,5.6% 100.8%,0% 100.8%,0% 92.3%,5% 82.3%,10.6% 75.4%,11.3% 61.5%,9.4% 42.3%,15.6% 23.1%,29.7% 6.9%) content-box;shape-margin:16px}
+@media(max-width:980px){.book .say-wrap{right:-40px;top:auto;bottom:-44px}.book .cover{margin-bottom:44px}}
+@media(max-width:700px){.about{display:flex;flex-direction:column-reverse}.about .think{float:none;shape-outside:none;width:220px;margin:22px 4px 0 auto}}
 
 /* services */
 .services{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;counter-reset:svc}
@@ -220,7 +247,6 @@ html{-webkit-text-size-adjust:100%}
   section{padding-bottom:56px}
   .sec-title{font-size:38px;margin-bottom:20px}
   .about .bio{font-size:19px;line-height:1.5}
-  .about .think{width:220px}
   .think p{font-size:17px}
   p.say.bubble{font-size:17px;width:190px;padding:15px 18px 17px}
   .say-wrap::after{left:26px;bottom:-17px;width:28px;height:22px}
@@ -268,6 +294,7 @@ html{-webkit-text-size-adjust:100%}
 }
 
 </style>
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 
@@ -313,8 +340,8 @@ html{-webkit-text-size-adjust:100%}
   <div class="wrap">
     <h2 class="sec-title">About</h2>
     <div class="about">
+      <figure class="think bubble flip pop"><svg viewBox="0 0 320 260" aria-hidden="true"><g class="puff" fill="#F6DD8E"><ellipse cx="180" cy="118" rx="112" ry="72"/><circle cx="248" cy="92" r="48"/><circle cx="192" cy="58" r="52"/><circle cx="124" cy="62" r="50"/><circle cx="76" cy="104" r="44"/><circle cx="86" cy="158" r="40"/><circle cx="144" cy="182" r="46"/><circle cx="212" cy="180" r="46"/><circle cx="270" cy="148" r="40"/></g><g fill="#F6DD8E"><circle class="dot d1" cx="10" cy="252" r="6"/><circle class="dot d2" cx="26" cy="230" r="10"/><circle class="dot d3" cx="52" cy="204" r="15"/></g></svg><p>A sense of humor is shelf-stable.</p></figure>
       <p class="bio">Dawn Perry is editorial director for Breville+, Breville’s home for all things connected cooking and coffee-making. She is the former food director of <i>Real Simple</i> and has worked in the test kitchens of <i>Bon Appétit</i>, <i>Martha Stewart Living</i>, and <i>Everyday Food</i>. More of her recipes and writing have been featured in NYT Cooking, the <i>LA Times</i>, <a href="https://www.epicurious.com/recipes/food/views/egg-curry-with-tomatoes-and-cilantro" target="_blank" rel="noopener">Epicurious</a>, <a href="https://www.foodandwine.com/chefs/communal-table-how-to-be-a-boss" target="_blank" rel="noopener"><i>Food &amp; Wine</i></a>, Extra Crispy, <i>Southern Living</i>, <i>Country Living</i>, and on <i>The Lonely Hour</i>. She is the author of <a href="https://www.shortstackeditions.com/products/vol-28-cucumbers-by-dawn-perry" target="_blank" rel="noopener">Short Stack Editions’ <i>Cucumbers</i></a> (2017) and <i>Ready, Set, Cook</i> (Simon &amp; Schuster, 2021). She lives in Los Angeles with her family.</p>
-      <figure class="think bubble"><svg viewBox="0 0 320 260" aria-hidden="true"><g fill="#F6DD8E"><ellipse cx="140" cy="118" rx="112" ry="72"/><circle cx="72" cy="92" r="48"/><circle cx="128" cy="58" r="52"/><circle cx="196" cy="62" r="50"/><circle cx="244" cy="104" r="44"/><circle cx="234" cy="158" r="40"/><circle cx="176" cy="182" r="46"/><circle cx="108" cy="180" r="46"/><circle cx="50" cy="148" r="40"/><circle cx="268" cy="204" r="15"/><circle cx="294" cy="230" r="10"/><circle cx="310" cy="252" r="6"/></g></svg><p>A sense of humor is shelf-stable.</p></figure>
     </div>
   </div>
 </section>
@@ -339,7 +366,7 @@ html{-webkit-text-size-adjust:100%}
     <div class="book">
       <div class="cover">
         <img src="images/ready-set-cook-cover.jpg" alt="Cover of Ready, Set, Cook by Dawn Perry" width="640" height="795" loading="lazy">
-        <div class="say-wrap"><p class="say bubble">What if cooking could be fun and fast and easy all the time?</p></div>
+        <div class="say-wrap pop"><p class="say bubble">What if cooking could be fun and fast and easy all the time?</p></div>
       </div>
       <div>
         <h3>Ready, Set, Cook</h3>
@@ -462,6 +489,13 @@ html{-webkit-text-size-adjust:100%}
 
 <footer><div class="wrap">© <span id="yr">2026</span> Dawn K. Perry</div></footer>
 <script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.pop'));
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(still||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:.45});
+  els.forEach(function(e){io.observe(e)});
+})();
 document.getElementById('yr').textContent=new Date().getFullYear();
 (function(){
   var f=document.getElementById('collab'); if(!f) return;
